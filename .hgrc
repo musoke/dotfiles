@@ -1,0 +1,4 @@
+[ui]
+# Name data to appear in commits
+username = Nathan Musoke <nathan.musoke@gmail.com>
+ssh = ssh -C

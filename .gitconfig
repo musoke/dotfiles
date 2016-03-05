@@ -1,0 +1,18 @@
+[user]
+	name = Nathan Musoke
+	email = nathan.musoke@gmail.com
+[push]
+	default = simple
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	wdiff = diff --color-words
+
+[merge]
+	ff = false
+[core]
+	editor = vim
+[color]
+	ui = auto
