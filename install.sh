@@ -18,3 +18,4 @@ ln -sfvb $(pwd)/.vim/spell/en.utf-8.add ~/.vim/spell/en.utf-8.add
 ln -sfvb $(pwd)/.vimrc ~
 
 ln -sfvb $(pwd)/bin/apod.sh ~/bin/
+ln -sfvb $(pwd)/bin/os_release.sh ~/bin/
