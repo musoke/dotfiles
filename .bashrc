@@ -5,7 +5,30 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Some commands from Ubuntu's default .bashrc; shall understand them later.
+if [ $(lsb_release -s -i) != "Ubuntu" ]
+    then
+        source ~/.bashrc_ubuntu
+fi
+
+# Change the prompt
 PS1='[\u@\h \W]\$ '
+
+# Bash aliases will eventually be found in ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # Output of ls should be coloured by default.
 alias ls='ls --color=auto'
@@ -50,4 +73,11 @@ if [ $(lsb_release -s -i) != "Ubuntu" ]
 fi
 #################################################
 
+# add ~/bin to PATH
+PATH=$HOME/bin:$PATH
+
+# add anaconda to PATH
+PATH=$HOME/anaconda3/bin:$PATH
+
+# Display system info.
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
