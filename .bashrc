@@ -47,7 +47,7 @@ if [ -f ~/git-completion.bash ]; then source ~/git-completion.bash; fi
 #################################################
 ## Automatically start SSH agent at launch (if not on Ubuntu).
 ## https://confluence.atlassian.com/pages/viewpage.action?pageId=277252540
-if [[ "$(uname -r)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
+if [[ ! "$(uname -r)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
     then
         SSH_ENV=$HOME/.ssh/environment
            
