@@ -7,4 +7,4 @@ prefix=http://apod.nasa.gov/apod/
 postfix=astropix.html
 
 # Get the latest picture
-curl -s -o ~/.apod.jpg $(curl -s ${prefix}${postfix} | grep -Pom1 'image/\d+/.*\.jpg' | cat <(printf "$prefix") <(cat -))
+curl -s -o ~/.apod.jpg $(curl -s ${prefix}${postfix}  | tac | tac | grep -Pom1 'image/\d+/.*\.jpg' | cat <(printf "$prefix") <(cat -))
