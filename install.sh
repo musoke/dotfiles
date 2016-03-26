@@ -16,6 +16,7 @@ ln -sfvb $(pwd)/.vim/ftplugin/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sfvb $(pwd)/.vim/spell/en.latin1.add ~/.vim/spell/en.latin1.add
 ln -sfvb $(pwd)/.vim/spell/en.utf-8.add ~/.vim/spell/en.utf-8.add
 ln -sfvb $(pwd)/.vimrc ~
+ln -sfvb $(pwd)/.tmux.conf ~
 
 ln -sfvb $(pwd)/bin/apod.sh ~/bin/
 ln -sfvb $(pwd)/bin/os_release.sh ~/bin/
