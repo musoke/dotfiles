@@ -103,6 +103,19 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Check if the spell list *.add has been updated since
+" .spl was generated. 
+" Important as I have *.add under version control on 
+" multiple machines.
+" http://vi.stackexchange.com/a/5052/6645
+for d in glob('~/.vim/spell/*.add', 1, 1)
+    if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
+        exec 'mkspell! ' . fnameescape(d)
+    endif
+endfor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Some commands defined to ease compiling of tex
