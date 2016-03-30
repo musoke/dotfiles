@@ -104,6 +104,13 @@ endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap <Esc> to the easier to reach jk and kj
+:imap jk <Esc>
+:imap kj <Esc>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Check if the spell list *.add has been updated since
 " .spl was generated. 
 " Important as I have *.add under version control on 
@@ -118,13 +125,6 @@ endfor
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Some commands defined to ease compiling of tex
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" remapping <Esc> to the easier to reach jk and kj
-:imap jk <Esc>
-:imap kj <Esc>
-
 " Shortcuts for compiling LaTeX
 nnoremap <F9> :w \| !latexmk -pdf %:t<CR>
 :imap <F9> <ESC> :w \| !latexmk -pdf %:t<CR>
