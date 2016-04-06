@@ -6,7 +6,8 @@ ln -sfvb $(pwd)/.bash_ubuntu ~
 ln -sfvb $(pwd)/.profile ~
 
 ln -sfvb $(pwd)/.gitconfig ~
-ln -sfvb $(pwd)/.gitignore ~
+git config --global core.excludesfile $(echo ~/.gitignore_global)
+ln -sfvb $(pwd)/.gitignore_global ~
 ln -sfvb $(pwd)/git-completion.bash ~
 ln -sfvb $(pwd)/.hgrc ~
 
