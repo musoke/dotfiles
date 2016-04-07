@@ -11,7 +11,7 @@ ln -sfvb $(pwd)/.gitignore_global ~
 ln -sfvb $(pwd)/git-completion.bash ~
 ln -sfvb $(pwd)/.hgrc ~
 
-ln -sfvb $(pwd)/.i3/config ~
+ln -sfvb $(pwd)/.i3/config ~/.i3/
 ln -sfvb $(pwd)/.taskrc ~
 ln -sfvb $(pwd)/.vim/ftplugin/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sfvb $(pwd)/.vim/spell/en.latin1.add ~/.vim/spell/en.latin1.add
