@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/vim-flake8"]
 	path = .vim/bundle/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
+[submodule ".vim/bundle/latex-suite"]
+	path = .vim/bundle/latex-suite
+	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX
