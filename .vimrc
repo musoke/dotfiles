@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sensible'
 Plugin 'nvie/vim-flake8'
+Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
