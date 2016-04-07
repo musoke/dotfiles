@@ -22,7 +22,7 @@ git submodule update --init --recursive
 ```
 To add a new plugin,
 ```
-cd ~./vim
+cd dotfiles/.vim
 git submodule add https://github.com/foo/bar.git bundle/bar
 ```
 To update one plugin,
