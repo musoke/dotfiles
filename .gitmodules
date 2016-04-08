@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/latex-suite"]
 	path = .vim/bundle/latex-suite
 	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
