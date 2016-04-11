@@ -173,3 +173,13 @@ let g:Tex_FoldedEnvironments = 'frame,verbatim,comment,eq,gather,align,figure,ta
 			\. 'keywords,abstract,titlepage'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" For vimtex
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable folding
+let g:vimtex_fold_enabled=1
+" Enable folding of multiline comments
+let g:vimtex_fold_comments=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
