@@ -33,3 +33,4 @@ To update all plugins,
 ```
 git submodule update --remote
 ```
+Adding a tilde to the end of the directory containing a bundle will cause it to be ignored by Pathogen.
