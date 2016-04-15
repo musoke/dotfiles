@@ -21,4 +21,3 @@ ln -sfvb $(pwd)/.vim ~/
 ln -sfvb $(pwd)/.tmux.conf ~
 
 ln -sfvb $(pwd)/bin ~/
-ln -sfvb $(pwd)/bin ~/
