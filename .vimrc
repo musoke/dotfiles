@@ -1,3 +1,5 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 " An example for a vimrc file.
 "
@@ -134,12 +136,17 @@ nnoremap <F10> :w \| :exe "silent !pdflatex %:t" \| :redraw! <CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+" Turn off spell checking in comments of tex documents
+let g:tex_comment_nospell= 1
+" Set default tex flavor to latex. Default is plain.
+let g:tex_flavor = "latex"
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " turn spell check on by default:
 :set spell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -170,4 +177,14 @@ let g:tex_flavor='latex'
 let g:Tex_FoldedEnvironments = 'frame,verbatim,comment,eq,gather,align,figure,table,thebibliography,'
 			\. 'keywords,abstract,titlepage'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" For vimtex
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable folding
+let g:vimtex_fold_enabled=1
+" Enable folding of multiline comments
+let g:vimtex_fold_comments=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
