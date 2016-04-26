@@ -1,0 +1,3 @@
+! Config for urxvt
+! To disable the scrollbar
+URxvt.scrollBar: false
