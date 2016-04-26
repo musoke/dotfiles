@@ -14,6 +14,7 @@ ln -sfvb $(pwd)/.hgrc ~
 
 ln -sfvb $(pwd)/.i3 ~/
 ln -sfvb $(pwd)/.taskrc ~
+ln -sfvb $(pwd)/.Xresources ~
 
 ln -sfvb $(pwd)/.vimrc ~
 ln -sfvb $(pwd)/.vim ~/
