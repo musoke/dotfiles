@@ -1,3 +1,11 @@
-! Config for urxvt
+!! Config for urxvt
 ! To disable the scrollbar
 URxvt.scrollBar: false
+
+! Clickable and yankable URLs
+URxvt.perl-ext: default,matcher,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
