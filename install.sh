@@ -29,3 +29,5 @@ ln -sfvb $(pwd)/.config/zathura/zathurarc ~/.config/zathura/
 ln -sfvb $(pwd)/.config/ranger/rc.conf ~/.config/ranger/
 ln -sfvb $(pwd)/.config/ranger/commands.py ~/.config/ranger/
 ln -sfvb $(pwd)/.config/ranger/rifle.conf ~/.config/ranger/
+
+ln -sfvb $(pwd)/.config/task/rc/solarized-dark-256.theme ~/.config/task/rc/
