@@ -1,0 +1,8 @@
+set recolor true
+set recolor-darkcolor "#839496"
+set recolor-lightcolor "#002b36"
+
+map + zoom in
+map - zoom out
+
+adjust_window width

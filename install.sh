@@ -7,6 +7,7 @@ ln -sfvb $(pwd)/.profile ~
 
 ln -sfvb $(pwd)/.gitconfig ~
 git config --global core.excludesfile $(echo ~/.gitignore_global)
+git update-index --assume-unchanged .gitconfig
 ln -sfvb $(pwd)/.gitignore_global ~
 ln -sfvb $(pwd)/git-completion.bash ~
 
@@ -22,3 +23,5 @@ ln -sfvb $(pwd)/.vim ~/
 ln -sfvb $(pwd)/.tmux.conf ~
 
 ln -sfvb $(pwd)/bin ~/
+
+ln -sfvb $(pwd)/.config/zathura/zathurarc ~/.config/zathura/
