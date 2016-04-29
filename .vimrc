@@ -215,4 +215,5 @@ inoremap <silent> `2 `2<c-r>=UltiSnips#Anon('\sqrt{$1}$0', '`2', '', 'i')<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme solarized
+set colorcolumn=80
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
