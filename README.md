@@ -9,7 +9,7 @@ git clone --recursive git@github.com:nathanmusoke/dotfiles.git
 to clone the repository and submodules.
 
 There is a script `install.sh` included which will create symlinks from `~` to the dotfiles.
-Note that this will __overwrite existing files__ in `~`.
+This should backup existing files `~/foo/bar` to `~/foo/bar~YYYY-MM-DD-HH-MM-SS`.
 At this point it also needs to be run from the root of the git repository.
 
 
