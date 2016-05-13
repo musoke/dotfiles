@@ -35,3 +35,7 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ranger/rifle.conf ~
 
 mkdir -p ~/.config/task/rc/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/task/rc/solarized-dark-256.theme ~/.config/task/rc/
+
+mkdir -p ~/.config/newsbeuter/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/newsbeuter/config ~/.config/newsbeuter/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/newsbeuter/urls ~/.config/newsbeuter/
