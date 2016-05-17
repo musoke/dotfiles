@@ -122,6 +122,26 @@ set expandtab
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Display relative line numbers
+set relativenumber
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Search settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Be sensible with case sensitivity
+set ignorecase
+set smartcase
+" Tab searches for matching brackets
+nnoremap <tab> %
+vnoremap <tab> %
+" Clear search highlighting
+nnoremap <leader><space> :noh<cr>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Check if the spell list *.add has been updated since
 " .spl was generated. 
 " Important as I have *.add under version control on 
