@@ -25,6 +25,9 @@ fi
 # Change the prompt
 PS1='[\u@\h \W]\$ '
 
+# Start tmux automatically
+[[ -z "$TMUX" ]] && exec tmux
+
 # Bash aliases will eventually be found in ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
