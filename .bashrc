@@ -33,6 +33,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Bash functions are found in ~/.bash_functions
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # Output of ls should be coloured by default.
 alias ls='ls --color=auto'
 
