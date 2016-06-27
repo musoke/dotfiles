@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bashrc ~
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bash_profile ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bash_aliases ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bash_functions ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bash_ubuntu ~
@@ -26,6 +27,8 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.tmux.conf ~
 mkdir -p ~/bin/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/bin ~/
 
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/user-dirs.dirs ~/.config/
+
 mkdir -p ~/.config/zathura
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/zathura/zathurarc ~/.config/zathura/
 
@@ -40,3 +43,10 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/task/rc/solarized-d
 mkdir -p ~/.config/newsbeuter/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/newsbeuter/config ~/.config/newsbeuter/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/newsbeuter/urls ~/.config/newsbeuter/
+
+mkdir -p ~/.config/mpd/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/mpd/mpd.conf ~/.config/mpd/
+
+mkdir -p ~/.config/ncmpcpp/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/config ~/.config/ncmpcpp/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/bindings ~/.config/ncmpcpp/
