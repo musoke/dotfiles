@@ -33,7 +33,8 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = [
-        "from numpy import *"
+        "from numpy import *",
+        "from __future__ import absolute_import, division, print_function"
         ]
 
 # Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'osx',
