@@ -164,6 +164,19 @@ nnoremap <leader><space> :noh<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Wildmenu controls autocompletion of filenames
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("wildmenu")
+    set wildmenu
+    set wildmode=longest,list
+    set wildignore+=*.a,*.o
+    set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+    set wildignore+=*~,*.swp,*.tmp
+endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Check if the spell list *.add has been updated since
 " .spl was generated. 
 " Important as I have *.add under version control on 
