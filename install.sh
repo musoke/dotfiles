@@ -50,3 +50,7 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/mpd/mpd.conf ~/.con
 mkdir -p ~/.config/ncmpcpp/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/config ~/.config/ncmpcpp/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/bindings ~/.config/ncmpcpp/
+
+mkdir -p ~/.config/vimfx/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/vimfx/config.js ~/.config/vimfx/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/vimfx/frame.js ~/.config/vimfx/
