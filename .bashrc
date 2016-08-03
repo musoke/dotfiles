@@ -81,5 +81,8 @@ fi
 # add ~/bin to PATH
 PATH=$HOME/bin:$PATH
 
+# add anaconda to PATH
+PATH=$HOME/anaconda3/bin:$PATH
+
 # Display system info.
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
