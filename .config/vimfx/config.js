@@ -18,3 +18,6 @@ vimfx.addKeyOverrides(
     ['j', 'k', 'r', 'a', '/']
   ]
 )
+
+// Prevent autofocus
+vimfx.set('prevent_autofocus', true)
