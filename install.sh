@@ -54,3 +54,6 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/bindings ~/
 mkdir -p ~/.config/vimfx/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/vimfx/config.js ~/.config/vimfx/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/vimfx/frame.js ~/.config/vimfx/
+
+mkdir -p ~/.ipython/profile_default/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.ipython/profile_default/ipython_config.py ~/.ipython/profile_default/
