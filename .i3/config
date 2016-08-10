@@ -26,6 +26,9 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# Hide borders adjacent to the edges of the screen
+hide_edge_borders both
+
 # Change window borders for some applications
 for_window [class="Firefox"] border 1pixel
 for_window [class="chromium"] border none
