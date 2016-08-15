@@ -25,7 +25,7 @@ fi
 # Change the prompt
 PS1='[\u@\h \W]\$ '
 
-# Bash aliases will eventually be found in ~/.bash_aliases
+# Bash aliases are found in ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -34,12 +34,6 @@ fi
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
-
-# Output of ls should be coloured by default.
-alias ls='ls --color=auto'
-
-# Make an alias for ls -lhF
-alias l='ls -lhF'
 
 # Specify a visual editor in environment variables
 export VISUAL="vim"
