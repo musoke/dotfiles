@@ -183,6 +183,10 @@ exec --no-startup-id ~/bin/apod.sh ; feh --bg-scale ~/.apod.jpg
 # Start dropbox when i3 starts.
 exec --no-startup-id dropbox start
 
+# Shortcut to show ipython in a floating window
+for_window [title="Calculator"] floating enable
+bindsym $mod+c exec urxvt -title taskwin -e ipython
+
 # Show taskwarrior list in a floating window
 for_window [title="taskwin"] floating enable
 bindsym $mod+t exec urxvt -title taskwin -e sh ~/bin/display_tasks.sh
