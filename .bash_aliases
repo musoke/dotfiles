@@ -6,3 +6,8 @@ alias l='ls -lhF'
 
 # Make an alias for ls -lhFA
 alias la='ls -lhFA'
+
+
+## Git
+alias gs='git status'
+alias gl='git log'
