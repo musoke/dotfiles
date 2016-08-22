@@ -9,5 +9,5 @@ alias la='ls -lhFA'
 
 
 ## Git
-alias gs='git status'
+alias gst='git status'
 alias gl='git log'
