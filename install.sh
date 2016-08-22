@@ -57,3 +57,6 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/vimfx/frame.js ~/.c
 
 mkdir -p ~/.ipython/profile_default/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.ipython/profile_default/ipython_config.py ~/.ipython/profile_default/
+
+mkdir -p ~/.jupyter/custom/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.jupyter/custom/custom.js ~/.jupyter/custom/
