@@ -23,7 +23,7 @@ if [[ "$(uname -r)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
 fi
 
 # Change the prompt
-PS1='[\u@\h \W]\$ '
+PS1='[\[$(tput bold)$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput bold)$(tput setaf 2)\]\h\[$(tput sgr0)\] \[$(tput bold)$(tput setaf 4)\]\W\[$(tput sgr0)\]] \$ '
 
 # Bash aliases are found in ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
