@@ -61,3 +61,6 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.ipython/profile_default/ip
 mkdir -p ~/.jupyter/custom/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.jupyter/custom/custom.js ~/.jupyter/custom/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.jupyter/custom/custom.css ~/.jupyter/custom/
+
+mkdir -p ~/.mutt/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/muttrc ~/.mutt/
