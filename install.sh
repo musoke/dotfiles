@@ -66,3 +66,4 @@ mkdir -p ~/.mutt/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/muttrc ~/.mutt/
 
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.offlineimaprc ~/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.msmtprc ~/
