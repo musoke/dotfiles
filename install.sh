@@ -15,7 +15,7 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/git-completion.bash ~
 
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.hgrc ~
 
-ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.i3 ~/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/i3 ~/.config/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.taskrc ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.Xresources ~
 
