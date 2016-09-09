@@ -65,5 +65,7 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.jupyter/custom/custom.css 
 mkdir -p ~/.mutt/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/muttrc ~/.mutt/
 
-ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.offlineimaprc ~/
+mkdir -p ~/.config/offlineimap
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/offlineimap/config ~/.config/offlineimap
+
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.msmtprc ~/
