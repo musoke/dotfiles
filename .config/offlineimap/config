@@ -108,6 +108,7 @@ accounts = Test
 # You can override this with a command-line option -u.
 #
 #ui = basic
+ui = TTYUI
 
 
 # This option stands in the [general] section.
@@ -137,6 +138,7 @@ accounts = Test
 # Tilde and environment variable expansions will be performed.
 #
 #pythonfile = ~/.offlineimap.py
+pythonfile = ~/.mutt/offlineimap.py
 
 
 # This option is in the [general] section.
@@ -171,7 +173,7 @@ accounts = Test
 # Mailbox name recorder
 ##################################################
 
-[mbnames]
+# [mbnames]
 
 # OfflineIMAP can record your mailbox names in a format you specify.
 # You can define the header, each mailbox item, the separator,
@@ -242,8 +244,8 @@ accounts = Test
 # These settings specify the two folders that you will be syncing.
 # You'll need to have a "Repository ..." section for each one.
 
-localrepository = LocalExample
-remoterepository = RemoteExample
+localrepository = LocalTest
+remoterepository = RemoteTest
 
 
 ########## Advanced settings
@@ -301,6 +303,7 @@ remoterepository = RemoteExample
 # files. See manual.
 #
 #status_backend = sqlite
+status_backend = sqlite
 
 
 # This option stands in the [Account Test] section.
@@ -360,6 +363,7 @@ remoterepository = RemoteExample
 # Non-ASCII characters in labels are bad handled or won't work at all.
 #
 #synclabels = no
+synclabels = yes
 
 
 # This option stands in the [Account Test] section.
@@ -418,12 +422,12 @@ remoterepository = RemoteExample
 #proxy = SOCKS5:IP:9999
 
 
-[Repository LocalExample]
+[Repository LocalTest]
 
 # Each repository requires a "type" declaration. The types supported for
 # local repositories are Maildir, GmailMaildir and IMAP.
 #
-type = Maildir
+type = GmailMaildir
 
 
 # This option stands in the [Repository LocalExample] section.
@@ -432,7 +436,8 @@ type = Maildir
 # to maildirs created under this path.  OfflineIMAP will create the
 # maildirs for you as needed.
 #
-localfolders = ~/Test
+#localfolders = ~/Test
+localfolders = ~/.mail/Test
 
 
 # This option stands in the [Repository LocalExample] section.
@@ -471,6 +476,7 @@ localfolders = ~/Test
 # See sync_deletes in the RemoteExample section, too.
 #
 #sync_deletes = yes
+sync_deletes = no
 
 
 # This option stands in the [Repository LocalExample] section.
@@ -548,7 +554,17 @@ localfolders = ~/Test
 #customflag_c = NonJunk
 #customflag_d = ToDo
 
-[Repository GmailLocalExample]
+
+nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
+                            'sent':      '[Gmail]/Sent Mail',
+                            'flagged':   '[Gmail]/Starred',
+                            'trash':     '[Gmail]/Trash',
+                            'archive':   '[Gmail]/All Mail',
+                            'spam':      '[Gmail]/Spam',
+                            'important': '[Gmail]/Important',
+                            }.get(folder, folder)
+
+# [Repository GmailLocalExample]
 
 # This type of repository enables syncing of Gmail. All Maildir
 # configuration settings are also valid here but the utime_from_header.
@@ -561,14 +577,15 @@ localfolders = ~/Test
 # the contents of all individual messages for labels and this may take
 # a while.
 #
-type = GmailMaildir
+# type = GmailMaildir
 
 
-[Repository RemoteExample]
+[Repository RemoteTest]
 
 # The remote repository.  We only support IMAP or Gmail here.
 #
-type = IMAP
+# type = IMAP
+type = Gmail
 
 
 # This option stands in the [Repository RemoteExample] section.
@@ -598,16 +615,22 @@ type = IMAP
 #
 # The returned value must be unicode type.
 #remoteusereval = getcredentials("filename", "hostname", "user")
-#
+remoteusereval = get_credentials(account="Test",
+                                 credential_type="user",
+                                 directory="~/dotfiles/")
+
 # The returned value must be unicode type.
 #remotepasseval = getcredentials("filename", "hostname", "passwd")
+remotepasseval = get_credentials(account="Test",
+                                 credential_type="password",
+                                 directory="~/dotfiles/")
 
 
 # This option stands in the [Repository RemoteExample] section.
 #
 # Specify the remote hostname.
 #
-remotehost = examplehost
+# remotehost = examplehost
 
 
 # This option stands in the [Repository RemoteExample] section.
@@ -680,6 +703,7 @@ remotehost = examplehost
 # See below for more verbose explanation.
 #
 #sslcacertfile = /path/to/cacertfile.crt
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 
 # This option stands in the [Repository RemoteExample] section.
@@ -770,7 +794,7 @@ remotehost = examplehost
 #
 # Specify the remote user name.
 #
-remoteuser = username
+# remoteuser = username
 
 
 # This option stands in the [Repository RemoteExample] section.
@@ -1014,6 +1038,7 @@ remoteuser = username
 # probably never set it to a value more than 5.
 #
 #maxconnections = 2
+maxconnections = 1
 
 
 # This option stands in the [Repository RemoteExample] section.
@@ -1102,7 +1127,14 @@ remoteuser = username
 # this:
 #
 #nametrans = lambda foldername: re.sub('^INBOX\.*', '.', foldername)
-
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            '[Gmail]/Spam':      'spam',
+                            '[Gmail]/Important': 'important',
+                            }.get(folder, folder)
 
 # This option stands in the [Repository RemoteExample] section.
 #
@@ -1178,6 +1210,7 @@ remoteuser = username
 # See sync_deletes in the LocalExample section, too.
 #
 #sync_deletes = yes
+sync_deletes = no
 
 
 # This option stands in the [Repository RemoteExample] section.
