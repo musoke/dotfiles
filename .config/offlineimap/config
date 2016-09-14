@@ -173,7 +173,7 @@ pythonfile = ~/.mutt/offlineimap.py
 # Mailbox name recorder
 ##################################################
 
-# [mbnames]
+[mbnames]
 
 # OfflineIMAP can record your mailbox names in a format you specify.
 # You can define the header, each mailbox item, the separator,
@@ -206,6 +206,13 @@ pythonfile = ~/.mutt/offlineimap.py
 #peritem = "+%(accountname)s/%(foldername)s"
 #sep = " "
 #footer = "\n"
+#incremental = no
+enabled = yes
+filename = ~/.mutt/muttrc.mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
 #incremental = no
 
 
