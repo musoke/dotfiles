@@ -41,6 +41,10 @@ export VISUAL="vim"
 # Use git-completion.bash so that git has autocomplete
 if [ -f ~/git-completion.bash ]; then source ~/git-completion.bash; fi
 
+# Enable pandoc bash completion
+if hash pandoc; then
+    eval "$(pandoc --bash-completion)"
+fi
 
 
 #################################################
