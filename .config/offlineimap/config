@@ -8,7 +8,7 @@
 #
 # Always use ASCII characters only.
 #
-accounts = Test, Public
+accounts = Test, Personal, Public, Work
 
 
 # This option stands in the [general] section.
@@ -187,16 +187,68 @@ sync_deletes = no
 
 
 
+[Account Personal]
+
+localrepository = LocalPersonal
+remoterepository = RemotePersonal
+
+#ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+
+[Repository LocalPersonal]
+
+type = GmailMaildir
+localfolders = ~/Mail/Personal
+
+# Propagate deletions from local to remote. Messages deleted in this repository
+# won't get deleted on remote if set to "no". Default is yes.
+sync_deletes = no
+
+nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
+                            'sent':      '[Gmail]/Sent Mail',
+                            'flagged':   '[Gmail]/Starred',
+                            'trash':     '[Gmail]/Trash',
+                            'archive':   '[Gmail]/All Mail',
+                            'spam':      '[Gmail]/Spam',
+                            'important': '[Gmail]/Important',
+                            }.get(folder, folder)
+
+
+[Repository RemotePersonal]
+
+type = Gmail
+remoteusereval = get_credentials(account="personal@gmail.com",
+                                 credential_type="user",
+                                 directory="~/.mutt/accounts/")
+remotepasseval = get_credentials(account="personal@gmail.com",
+                                 credential_type="password",
+                                 directory="~/.mutt/accounts/")
+
+maxconnections = 2
+
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            '[Gmail]/Spam':      'spam',
+                            '[Gmail]/Important': 'important',
+                            }.get(folder, folder)
+
+# Propagate deletions from remote to local. Messages deleted in this repository
+# won't get deleted on the local repositor if set to "no". Default is yes.
+sync_deletes = no
+
+readonly = True
+
+
+
+
 [Account Public]
 
 localrepository = LocalPublic
 remoterepository = RemotePublic
 
-# Set of labels to be ignored.  Comma-separated list.  GMail-specific
-# labels all start with backslash ('\').
-#
-# Use ASCII characters only.
-#
 #ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
 
 
@@ -226,6 +278,63 @@ remoteusereval = get_credentials(account="public",
                                  credential_type="user",
                                  directory="~/.mutt/accounts/")
 remotepasseval = get_credentials(account="public",
+                                 credential_type="password",
+                                 directory="~/.mutt/accounts/")
+
+maxconnections = 2
+
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            '[Gmail]/Spam':      'spam',
+                            '[Gmail]/Important': 'important',
+                            }.get(folder, folder)
+
+# Propagate deletions from remote to local. Messages deleted in this repository
+# won't get deleted on the local repositor if set to "no". Default is yes.
+sync_deletes = no
+
+readonly = True
+
+
+
+
+[Account Work]
+
+localrepository = LocalWork
+remoterepository = RemoteWork
+
+#ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+
+[Repository LocalWork]
+
+type = GmailMaildir
+localfolders = ~/Mail/Work
+
+# Propagate deletions from local to remote. Messages deleted in this repository
+# won't get deleted on remote if set to "no". Default is yes.
+sync_deletes = no
+
+nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
+                            'sent':      '[Gmail]/Sent Mail',
+                            'flagged':   '[Gmail]/Starred',
+                            'trash':     '[Gmail]/Trash',
+                            'archive':   '[Gmail]/All Mail',
+                            'spam':      '[Gmail]/Spam',
+                            'important': '[Gmail]/Important',
+                            }.get(folder, folder)
+
+
+[Repository RemoteWork]
+
+type = Gmail
+remoteusereval = get_credentials(account="work",
+                                 credential_type="user",
+                                 directory="~/.mutt/accounts/")
+remotepasseval = get_credentials(account="work",
                                  credential_type="password",
                                  directory="~/.mutt/accounts/")
 
