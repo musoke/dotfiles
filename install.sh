@@ -75,3 +75,6 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/offlineimap/config 
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/offlineimap.py ~/.mutt/
 
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.msmtprc ~/
+
+mkdir -p ~/.gnupg/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.gnupg/gpg.conf ~/.gnupg/
