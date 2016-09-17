@@ -117,6 +117,19 @@ set forward_quote                    # include message in forwards
 
 
 
+# Crypto settings ------------------------------------
+# Use GPGME
+set crypt_use_gpgme = yes
+# Don't sign replies to signed email
+set crypt_replysign = no
+# Encrypt replies to encrypted email
+set crypt_replyencrypt = yes
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+# Attempt to verify email signatures automatically
+set crypt_verify_sig = yes
+
+
 # Account Settings -----------------------------------
 
 # Alternate email addresses.
