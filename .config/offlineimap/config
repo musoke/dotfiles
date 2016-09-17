@@ -162,10 +162,10 @@ nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
 type = Gmail
 remoteusereval = get_credentials(account="Test",
                                  credential_type="user",
-                                 directory="~/dotfiles/")
+                                 directory="~/.mutt/accounts/")
 remotepasseval = get_credentials(account="Test",
                                  credential_type="password",
-                                 directory="~/dotfiles/")
+                                 directory="~/.mutt/accounts/")
 
 maxconnections = 2
 
@@ -224,10 +224,10 @@ nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
 type = Gmail
 remoteusereval = get_credentials(account="public",
                                  credential_type="user",
-                                 directory="~/dotfiles/")
+                                 directory="~/.mutt/accounts/")
 remotepasseval = get_credentials(account="public",
                                  credential_type="password",
-                                 directory="~/dotfiles/")
+                                 directory="~/.mutt/accounts/")
 
 maxconnections = 2
 
