@@ -1,5 +1,5 @@
 # Paths ----------------------------------------------
-set folder           = ~/.mail               # mailbox location
+set folder           = ~/Mail               # mailbox location
 source ~/.mutt/muttrc.mailboxes
 set alias_file       = ~/.mutt/alias         # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers

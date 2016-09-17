@@ -141,7 +141,7 @@ remoterepository = RemoteTest
 [Repository LocalTest]
 
 type = GmailMaildir
-localfolders = ~/.mail/Test
+localfolders = ~/Mail/Test
 
 # Propagate deletions from local to remote. Messages deleted in this repository
 # won't get deleted on remote if set to "no". Default is yes.
@@ -203,7 +203,7 @@ remoterepository = RemotePublic
 [Repository LocalPublic]
 
 type = GmailMaildir
-localfolders = ~/.mail/Public
+localfolders = ~/Mail/Public
 
 # Propagate deletions from local to remote. Messages deleted in this repository
 # won't get deleted on remote if set to "no". Default is yes.
