@@ -129,8 +129,13 @@ set forward_quote                    # include message in forwards
 
 
 
+# Multiple Accounts  ---------------------------------
+source ~/.mutt/accounts/personal
 
+folder-hook Test/*       source ~/.mutt/accounts/test
+folder-hook Personal/*   source ~/.mutt/accounts/personal
+folder-hook Public/*     source ~/.mutt/accounts/public
+folder-hook Work/*       source ~/.mutt/accounts/work
 
-set sendmail = "/usr/bin/msmtp -a test"
-set sendmail_wait = 0
-unset record
+# set sendmail_wait = 0
+# unset record
