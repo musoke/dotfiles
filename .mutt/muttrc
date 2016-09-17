@@ -1,5 +1,6 @@
 # Paths ----------------------------------------------
 set folder           = ~/Mail               # mailbox location
+# offlineimap creates a file with a list of mailboxes
 source ~/.mutt/muttrc.mailboxes
 set alias_file       = ~/.mutt/alias         # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers
@@ -7,7 +8,7 @@ set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 set certificate_file = ~/.mutt/certificates  # where to store certs
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
 set tmpdir           = ~/.mutt/temp          # where to keep temp files
-set signature        = ~/.mutt/sig           # my signature file
+# set signature        = ~/.mutt/sig           # my signature file
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -42,18 +43,6 @@ ignore *                                # ignore all headers
 unignore from: to: cc: date: subject:   # show only these
 unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: date: subject:  # and in this order
-
-# Account Settings -----------------------------------
-
-# Default inbox.
-set spoolfile = "+Test/INBOX"
-
-# Alternate email addresses.
-alternates address@example.com
-
-# Other special folders.
-set mbox      = "+archive"
-set postponed = "+drafts"
 
 # Index View Options ---------------------------------
 set date_format = "%m/%d"
@@ -111,7 +100,6 @@ bind attach <return> view-mailcap
 
 
 # Compose View Options -------------------------------
-set realname = ""          # who am i?
 set envelope_from                    # which from?
 # set sig_dashes                       # dashes before sig
 set edit_headers                     # show headers when composing
@@ -129,7 +117,14 @@ set forward_quote                    # include message in forwards
 
 
 
+# Account Settings -----------------------------------
+
+# Alternate email addresses.
+alternates address@example.com
+
 # Multiple Accounts  ---------------------------------
+# Default inbox.
+set spoolfile = "+Personal/INBOX"
 source ~/.mutt/accounts/personal
 
 folder-hook Test/*       source ~/.mutt/accounts/test
