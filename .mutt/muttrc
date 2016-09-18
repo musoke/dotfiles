@@ -3,6 +3,7 @@ set folder           = ~/Mail               # mailbox location
 # offlineimap creates a file with a list of mailboxes
 source ~/.mutt/muttrc.mailboxes
 set alias_file       = ~/.mutt/alias         # where to store aliases
+source                 ~/.mutt/alias         # source aliases when starting
 set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 set certificate_file = ~/.mutt/certificates  # where to store certs
@@ -128,7 +129,9 @@ set crypt_replysign = no
 # Encrypt replies to encrypted email
 set crypt_replyencrypt = yes
 # Encrypt and sign replies to encrypted and signed email
-set crypt_replysignencrypted = yes
+set crypt_replysignencrypted = no
+# Automatically encrypt outgoing mail
+set crypt_opportunistic_encrypt = yes
 # Attempt to verify email signatures automatically
 set crypt_verify_sig = yes
 
