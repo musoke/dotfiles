@@ -64,6 +64,8 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.jupyter/custom/custom.css 
 
 mkdir -p ~/.mutt/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/muttrc ~/.mutt/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc ~/.mutt/mutt-colors-solarized-dark-16.muttrc
+
 mkdir -p ~/.mutt/accounts
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/accounts/test ~/.mutt/accounts
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.mutt/accounts/personal ~/.mutt/accounts

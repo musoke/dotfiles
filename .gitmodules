@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/gitgutter"]
 	path = .vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule ".mutt/mutt-colors-solarized"]
+	path = .mutt/mutt-colors-solarized
+	url = git@github.com:nathanmusoke/mutt-colors-solarized.git
