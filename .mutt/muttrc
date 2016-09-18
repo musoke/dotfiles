@@ -25,10 +25,10 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
 # Sidebar Patch --------------------------------------
-# set sidebar_delim   = '  │'
 set sidebar_visible = yes
-set sidebar_width   = 24
+# set sidebar_width   = 24
 set sidebar_folder_indent = yes
+set sidebar_short_path = yes
 # color sidebar_new color221 color233
 # Sidebar Navigation ---------------------------------
 bind index,pager <down>   sidebar-next
