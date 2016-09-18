@@ -72,7 +72,7 @@ enabled = yes
 filename = ~/.mutt/muttrc.mailboxes
 header = "mailboxes "
 peritem = "+%(accountname)s/%(foldername)s"
-sep = " "
+sep = " \\\n"
 footer = "\n"
 #incremental = no
 
