@@ -141,7 +141,7 @@ localfolders = ~/Mail/Test
 
 # Propagate deletions from local to remote. Messages deleted in this repository
 # won't get deleted on remote if set to "no". Default is yes.
-sync_deletes = yes
+# sync_deletes = no
 
 nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
                             'sent':      '[Gmail]/Sent Mail',
@@ -185,7 +185,7 @@ folderfilter = lambda folder: folder in [
 
 # Propagate deletions from remote to local. Messages deleted in this repository
 # won't get deleted on the local repositor if set to "no". Default is yes.
-sync_deletes = yes
+# sync_deletes = no
 
 #readonly = False
 
@@ -207,7 +207,7 @@ localfolders = ~/Mail/Personal
 
 # Propagate deletions from local to remote. Messages deleted in this repository
 # won't get deleted on remote if set to "no". Default is yes.
-sync_deletes = no
+# sync_deletes = no
 
 nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
                             'sent':      '[Gmail]/Sent Mail',
@@ -251,7 +251,7 @@ folderfilter = lambda folder: folder in [
 
 # Propagate deletions from remote to local. Messages deleted in this repository
 # won't get deleted on the local repositor if set to "no". Default is yes.
-sync_deletes = no
+# sync_deletes = no
 
 readonly = False
 
@@ -273,7 +273,7 @@ localfolders = ~/Mail/Public
 
 # Propagate deletions from local to remote. Messages deleted in this repository
 # won't get deleted on remote if set to "no". Default is yes.
-sync_deletes = yes
+# sync_deletes = no
 
 nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
                             'sent':      '[Gmail]/Sent Mail',
@@ -317,7 +317,7 @@ folderfilter = lambda folder: folder in [
 
 # Propagate deletions from remote to local. Messages deleted in this repository
 # won't get deleted on the local repositor if set to "no". Default is yes.
-sync_deletes = no
+# sync_deletes = no
 
 readonly = False
 
@@ -339,7 +339,7 @@ localfolders = ~/Mail/Work
 
 # Propagate deletions from local to remote. Messages deleted in this repository
 # won't get deleted on remote if set to "no". Default is yes.
-sync_deletes = no
+# sync_deletes = no
 
 nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
                             'sent':      '[Gmail]/Sent Mail',
@@ -383,6 +383,6 @@ folderfilter = lambda folder: folder in [
 
 # Propagate deletions from remote to local. Messages deleted in this repository
 # won't get deleted on the local repositor if set to "no". Default is yes.
-sync_deletes = no
+# sync_deletes = no
 
 readonly = False
