@@ -52,3 +52,6 @@
 [submodule ".mutt/mutt-colors-solarized"]
 	path = .mutt/mutt-colors-solarized
 	url = git@github.com:nathanmusoke/mutt-colors-solarized.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = git@github.com:nathanmusoke/rust.vim.git
