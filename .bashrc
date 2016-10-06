@@ -35,6 +35,9 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
+# Specify an editor in environment variables
+export VISUAL="vim"
+
 # Specify a visual editor in environment variables
 export VISUAL="vim"
 
