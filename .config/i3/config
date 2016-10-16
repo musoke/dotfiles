@@ -167,6 +167,18 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+
+        colors {
+            background              #002b36
+            separator               #586e75
+            statusline              #839496
+
+            #                       #border #backgr #text
+            focused_workspace       #002b36 #839496 #002b36
+            active_workspace        #839496 #002b36 #839496
+            inactive_workspace      #002b36 #002b36 #839496
+            urgent_workspace        #002b36 #dc322f #839496
+        }
 }
 
 # shortcut to start keepass
