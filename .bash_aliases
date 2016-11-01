@@ -15,3 +15,6 @@ alias la='ls -lhFA --color=auto'
 ## Git
 alias gst='git status'
 alias gl='git log'
+
+## Mutt
+alias m='mutt'
