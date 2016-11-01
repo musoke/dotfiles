@@ -1,11 +1,15 @@
 # Output of ls should be coloured by default.
 alias ls='ls --color=auto'
 
-# Make an alias for ls -lhF
-alias l='ls -lhF'
+# Output of grep should be coloured.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
-# Make an alias for ls -lhFA
-alias la='ls -lhFA'
+# Aliases for ls
+alias ls='ls --color=auto'
+alias l='ls -lhF --color=auto'
+alias la='ls -lhFA --color=auto'
 
 
 ## Git
