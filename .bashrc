@@ -17,7 +17,7 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # Some commands from Ubuntu's default .bashrc; shall understand them later.
-if [[ "$(uname -r)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
+if [[ "$(uname -v)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
     then
         source ~/.bashrc_ubuntu
 fi
@@ -53,7 +53,7 @@ fi
 #################################################
 ## Automatically start SSH agent at launch (if not on Ubuntu).
 ## https://confluence.atlassian.com/pages/viewpage.action?pageId=277252540
-if [[ ! "$(uname -r)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
+if [[ ! "$(uname -v)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
     then
         SSH_ENV=$HOME/.ssh/environment
            
