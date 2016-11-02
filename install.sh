@@ -47,6 +47,12 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/newsbeuter/urls ~/.
 mkdir -p ~/.config/mpd/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/mpd/mpd.conf ~/.config/mpd/
 
+mkdir -p ~/.config/beets/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/beets/config.yaml ~/.config/beets/
+if hash beet; then
+    beet completion > ~/.beets-completion.bash
+fi
+
 mkdir -p ~/.config/ncmpcpp/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/config ~/.config/ncmpcpp/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/bindings ~/.config/ncmpcpp/
