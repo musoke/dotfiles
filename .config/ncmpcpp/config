@@ -213,8 +213,10 @@ mpd_music_dir = ~/media/music
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
 #now_playing_prefix = $b
+now_playing_prefix = $b$u
 #
 #now_playing_suffix = $/b
+now_playing_suffix = $/b$/u
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
