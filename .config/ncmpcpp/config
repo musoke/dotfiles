@@ -14,6 +14,9 @@
 ##
 #
 #ncmpcpp_directory = ~/.ncmpcpp
+ncmpcpp_directory = ~/.config/ncmpcpp
+# I've had to set this to get bindings read from ~/.config/ncmpcpp, see
+# https://github.com/arybczak/ncmpcpp/issues/91 for an issue upstream.
 #
 ##
 ## Directory for storing downloaded lyrics. It
