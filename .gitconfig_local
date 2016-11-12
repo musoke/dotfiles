@@ -1,0 +1,7 @@
+## Filters to remove info before committing
+
+[filter "remove-pass-mpd"]
+clean = "sed -e 's/\\(^password\\s*\\)\".*@\\(.*\\)\"/#\\1\"PASSWORD_TODO@\\2\"/'"
+
+[filter "remove-pass-ncmpcpp"]
+clean = "sed -e 's/\\(^mpd_host\\s*=\\s*\\).*@\\(.*\\)/#\\1PASSWORD_TODO@\\2/'"

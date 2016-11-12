@@ -1,0 +1,3 @@
+# Remove passwords from some config files
+.config/mpd/mpd.conf filter=remove-pass-mpd
+.config/ncmpcpp/config filter=remove-pass-ncmpcpp
