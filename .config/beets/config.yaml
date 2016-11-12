@@ -1,0 +1,10 @@
+directory: ~/media/music
+library: ~/media/music/musiclibrary.blb
+
+asciify_paths: yes
+
+import:
+    move: no
+    languages: en
+
+plugins: chroma fromfilename

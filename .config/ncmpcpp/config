@@ -14,6 +14,9 @@
 ##
 #
 #ncmpcpp_directory = ~/.ncmpcpp
+ncmpcpp_directory = ~/.config/ncmpcpp
+# I've had to set this to get bindings read from ~/.config/ncmpcpp, see
+# https://github.com/arybczak/ncmpcpp/issues/91 for an issue upstream.
 #
 ##
 ## Directory for storing downloaded lyrics. It
@@ -25,7 +28,7 @@
 #
 ##### connection settings #####
 #
-#mpd_host = localhost
+#mpd_host = PASSWORD_TODO@localhost
 #
 #mpd_port = 6600
 #
@@ -34,6 +37,7 @@
 ## Needed for tag editor and file operations to work.
 ##
 #mpd_music_dir = ~/music
+mpd_music_dir = ~/media/music
 #
 #mpd_crossfade_time = 5
 #
@@ -212,8 +216,10 @@
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
 #now_playing_prefix = $b
+now_playing_prefix = $b$u
 #
 #now_playing_suffix = $/b
+now_playing_suffix = $/b$/u
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -277,6 +283,7 @@
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{lr}
 #
 ##### various settings #####
 #

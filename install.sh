@@ -7,6 +7,7 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bash_functions ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.bashrc_ubuntu ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.profile ~
 
+git config --local include.path ../.gitconfig_local
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.gitconfig ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.gitignore_global ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/git-completion.bash ~
@@ -46,6 +47,12 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/newsbeuter/urls ~/.
 
 mkdir -p ~/.config/mpd/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/mpd/mpd.conf ~/.config/mpd/
+
+mkdir -p ~/.config/beets/
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/beets/config.yaml ~/.config/beets/
+if hash beet; then
+    beet completion > ~/.beets-completion.bash
+fi
 
 mkdir -p ~/.config/ncmpcpp/
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.config/ncmpcpp/config ~/.config/ncmpcpp/
