@@ -162,7 +162,7 @@ def_key "h"
   previous_column
 
 def_key "l"
-  previous_column
+  next_column
 
 ##### Default commands #####
 #
