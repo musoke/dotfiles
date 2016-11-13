@@ -198,6 +198,8 @@ bindsym $mod+p exec keepassx2
 # keepass shortcut to auto-type
 bindsym $mod+Shift+p exec "keepassx2 -auto-type-selected"
 
+bindsym $mod+B exec "firefox"
+
 # Set download the latest astronomy picture of the day and set it as the wallpaper.
 # Takes some time and may fail, so first set to the last wallpaper.
 exec --no-startup-id ~/.fehbg
