@@ -38,7 +38,7 @@ client.placeholder      #000000 #0c0c0c #839496 #d33682   #0c0c0c
 
 
 # Hide borders adjacent to the edges of the screen
-hide_edge_borders none
+hide_edge_borders smart
 
 # Change window borders for some applications
 for_window [class="Firefox"] border 1pixel
