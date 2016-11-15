@@ -1,0 +1,6 @@
+#This lets you use up and down arrows
+#  for incremental search
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
