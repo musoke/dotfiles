@@ -17,6 +17,8 @@ alias gst='git status'
 alias gl='git log'
 alias glp='git log --patch'
 alias glg='git log --graph'
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 ## Mutt
 alias m='mutt'
