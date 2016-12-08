@@ -7,4 +7,6 @@ import:
     move: no
     languages: en
 
-plugins: chroma fromfilename
+plugins: >
+    chroma
+    fromfilename
