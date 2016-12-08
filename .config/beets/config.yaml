@@ -10,3 +10,7 @@ import:
 plugins: >
     chroma
     fromfilename
+    fetchart
+
+fetchart:
+    store_source: yes
