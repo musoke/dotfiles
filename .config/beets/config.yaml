@@ -11,6 +11,7 @@ plugins: >
     chroma
     fromfilename
     fetchart
+    mbsync
 
 fetchart:
     store_source: yes
