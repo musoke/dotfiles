@@ -42,7 +42,7 @@ export EDITOR="vim"
 export VISUAL="vim"
 
 # Use git-completion.bash so that git has autocomplete
-if [ -f ~/git-completion.bash ]; then source ~/git-completion.bash; fi
+if [ -f ~/.git-completion.bash ]; then source ~/.git-completion.bash; fi
 
 # Use beets-completion.bash
 if [ -f ~/.beets-completion.bash ]; then source ~/.beets-completion.bash; fi
