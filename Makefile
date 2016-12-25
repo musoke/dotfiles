@@ -20,6 +20,11 @@ all : \
 help : Makefile
 	@sed -n 's/^##//p' $<
 
+## update			: Pull latest changes from git
+.PHONY : update
+update :
+	git pull --rebase
+
 ## bash			: Symlink bash files
 .PHONY : bash
 bash : \
