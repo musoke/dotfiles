@@ -5,6 +5,7 @@ INTO = $(HOME)
 
 MKDIR = mkdir -p
 LN = ln -sfvb --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
+BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak$(shell date +%Y-%m-%d-%H-%M-%S)
 
 ## minimal		: Install minimal selection of dotfiles
 .PHONY : minimal
@@ -37,7 +38,10 @@ install-bash : \
 	.bashrc_ubuntu \
 	.profile
 
-	for f in $^; do $(LN) $(FROM)/$$f $(INTO); done
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
 
 ## bin			: Symlink bin
 	$(MKDIR) $(INTO)/bin
