@@ -9,8 +9,8 @@ LN = ln -sfvb --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
 ## minimal		: Install minimal selection of dotfiles
 .PHONY : minimal
 minimal : \
-	bash \
-	bin
+	install-bash \
+	install-bin \
 
 ## all			: Install all dotfiles
 .PHONY : all
@@ -28,8 +28,8 @@ update :
 	git pull --rebase
 
 ## bash			: Symlink bash files
-.PHONY : bash
-bash : \
+.PHONY : install-bash
+install-bash : \
 	.bashrc \
 	.bash_profile \
 	.bash_aliases \
@@ -40,7 +40,7 @@ bash : \
 	for f in $^; do $(LN) $(FROM)/$$f $(INTO); done
 
 ## bin			: Symlink bin
-.PHONY : bin
-bin : bin/*
 	$(MKDIR) $(INTO)/bin
+.PHONY : install-bin
+install-bin : bin/*
 	for f in $^; do $(LN) $(FROM)/$$f $(INTO)/bin; done
