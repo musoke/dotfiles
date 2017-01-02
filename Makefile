@@ -26,6 +26,7 @@ all : \
 	minimal \
 	install-beets \
 	install-gnupg \
+	install-mercurial \
 
 ## help			: Show this message
 .PHONY : help
@@ -105,6 +106,15 @@ install-gnupg : \
 	.gnupg/*[^~] \
 
 	-$(MKDIR) $(INTO)/.gnupg
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-mercurial
+install-mercurial : \
+	.hgrc \
+
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
