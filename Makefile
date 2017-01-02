@@ -3,8 +3,13 @@ FROM = $(shell pwd)
 # Location that will contain links
 INTO = $(HOME)
 
+# Command to create empty directories
 MKDIR = mkdir -p
+
+# Command to create symlinks
 LN = ln -sfvb --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
+
+# Command to backup non-symlinks
 BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak$(shell date +%Y-%m-%d-%H-%M-%S)
 
 ## minimal		: Install minimal selection of dotfiles
@@ -29,7 +34,7 @@ help : Makefile
 update :
 	git pull --rebase
 
-## bash			: Symlink bash files
+## install-bash		: Symlink bash config
 .PHONY : install-bash
 install-bash : \
 	.bashrc \
