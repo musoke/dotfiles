@@ -12,6 +12,7 @@ BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak$(shell date +%Y-%m-%d-
 minimal : \
 	install-bash \
 	install-bin \
+	install-git \
 
 ## all			: Install all dotfiles
 .PHONY : all
@@ -47,6 +48,21 @@ install-bash : \
 .PHONY : install-bin
 install-bin : bin/*
 	-$(MKDIR) $(INTO)/bin
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+## install-git		: Configure local repo and symlink config
+.PHONY : install-git
+install-git : \
+	.gitconfig \
+	.gitignore_global \
+	.git-completion.bash \
+
+	# Configure this git repo
+	git config --local include.path $(FROM)/.gitconfig_local
+
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
