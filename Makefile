@@ -23,7 +23,8 @@ minimal : \
 ## all			: Install all dotfiles
 .PHONY : all
 all : \
-	minimal
+	minimal \
+	install-beets \
 
 ## help			: Show this message
 .PHONY : help
@@ -79,6 +80,19 @@ install-git : \
 
 	# Configure this git repo
 	git config --local include.path $(FROM)/.gitconfig_local
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+## install-beets		: Symlink config and generate bash completion
+.PHONY : install-beets
+install-beets : \
+	.config/beets/* \
+
+	# Link config
+	if hash beet; then beet completion > $(HOME)/.beets-completion.bash; fi
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
