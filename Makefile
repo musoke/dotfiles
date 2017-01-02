@@ -43,8 +43,11 @@ install-bash : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
-## bin			: Symlink bin
-	$(MKDIR) $(INTO)/bin
+## install-bin		: Symlink bin
 .PHONY : install-bin
 install-bin : bin/*
-	for f in $^; do $(LN) $(FROM)/$$f $(INTO)/bin; done
+	-$(MKDIR) $(INTO)/bin
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
