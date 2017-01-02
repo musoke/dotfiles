@@ -27,6 +27,7 @@ all : \
 	install-beets \
 	install-gnupg \
 	install-mercurial \
+	install-readline \
 
 ## help			: Show this message
 .PHONY : help
@@ -133,3 +134,12 @@ install-msmtp : \
 .PHONY : install-mutt
 install-mutt : \
 	install-msmtp \
+
+.PHONY : install-readline
+install-readline : \
+	.inputrc \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
