@@ -119,3 +119,17 @@ install-mercurial : \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
+
+.PHONY : install-msmtp
+install-msmtp : \
+	.msmtprc \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+## install-mutt		: Symlink config, create dirs, install config for deps
+.PHONY : install-mutt
+install-mutt : \
+	install-msmtp \
