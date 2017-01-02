@@ -25,6 +25,7 @@ minimal : \
 all : \
 	minimal \
 	install-beets \
+	install-gnupg \
 
 ## help			: Show this message
 .PHONY : help
@@ -94,6 +95,16 @@ install-beets : \
 	# Link config
 	if hash beet; then beet completion > $(HOME)/.beets-completion.bash; fi
 
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-gnupg
+install-gnupg : \
+	.gnupg/*[^~] \
+
+	-$(MKDIR) $(INTO)/.gnupg
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
