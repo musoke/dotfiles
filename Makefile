@@ -18,6 +18,7 @@ minimal : \
 	install-bash \
 	install-bin \
 	install-git \
+	install-vim \
 
 ## all			: Install all dotfiles
 .PHONY : all
@@ -53,6 +54,17 @@ install-bash : \
 .PHONY : install-bin
 install-bin : bin/*
 	-$(MKDIR) $(INTO)/bin
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+## install-vim		: Symlink vim config
+.PHONY : install-vim
+install-vim : \
+	.vimrc \
+	.vim \
+
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
