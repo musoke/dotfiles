@@ -10,8 +10,8 @@ ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.profile ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.inputrc ~
 
 git config --local include.path ../.gitconfig_local
-ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/git/.gitconfig ~
-ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/git/.gitignore_global ~
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.gitconfig ~
+ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.gitignore_global ~
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.git-completion.bash ~
 
 ln -sfvb --suffix ~$(date +%Y-%m-%d-%H-%M-%S) $(pwd)/.hgrc ~
