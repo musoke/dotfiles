@@ -18,6 +18,7 @@ minimal : \
 	install-bash \
 	install-bin \
 	install-git \
+	install-tmux \
 	install-vim \
 
 ## all			: Install all dotfiles
@@ -181,6 +182,15 @@ install-task : \
 	.config/task/rc/*[^~] \
 
 	-$(MKDIR) $(INTO)/.config/task/rc
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-tmux
+install-tmux : \
+	.tmux.conf \
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
