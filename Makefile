@@ -11,7 +11,13 @@ INTO = $(HOME)
 MKDIR = mkdir -p
 
 # Command to create symlinks
-LN = ln -sfvb --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
+# Flags:
+#   s: symbolic
+#   v: verbose
+#   b: backup
+#   n: no-dereference: treat LINK_NAME as a normal file if it is a symlink to a
+#      directory. This is needed to avoid recursions in the backups created.
+LN = ln -svbn --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
 
 # Command to backup non-symlinks
 BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak-$(shell date +%Y-%m-%d-%H-%M-%S)
