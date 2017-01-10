@@ -31,6 +31,7 @@ all : \
 	install-mercurial \
 	install-readline \
 	install-task \
+	install-xdg \
 
 ## help			: Show this message
 .PHONY : help
@@ -191,6 +192,17 @@ install-task : \
 .PHONY : install-tmux
 install-tmux : \
 	.tmux.conf \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-xdg
+install-xdg : \
+	.config/user-dirs.dirs \
+
+	-$(MKDIR) $(INTO)/.config
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
