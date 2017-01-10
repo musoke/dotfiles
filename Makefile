@@ -70,7 +70,8 @@ install-bash : \
 
 ## install-bin		: Symlink bin
 .PHONY : install-bin
-install-bin : bin/*
+install-bin : bin/*[^~]
+
 	-$(MKDIR) $(INTO)/bin
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
@@ -106,7 +107,7 @@ install-git : \
 ## install-beets		: Symlink config and generate bash completion
 .PHONY : install-beets
 install-beets : \
-	.config/beets/* \
+	.config/beets/*[^~] \
 
 	# Link config
 	if hash beet; then beet completion > $(HOME)/.beets-completion.bash; fi
