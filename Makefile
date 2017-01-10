@@ -26,6 +26,7 @@ all : \
 	minimal \
 	install-beets \
 	install-gnupg \
+	install-mail \
 	install-mercurial \
 	install-readline \
 
@@ -112,6 +113,12 @@ install-gnupg : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
+.PHONY : install-mail
+install-mail : \
+	install-mutt \
+	install-mutt-accounts \
+	install-msmtp \
+
 .PHONY : install-mercurial
 install-mercurial : \
 	.hgrc \
@@ -133,7 +140,30 @@ install-msmtp : \
 ## install-mutt		: Symlink config, create dirs, install config for deps
 .PHONY : install-mutt
 install-mutt : \
-	install-msmtp \
+	.mutt/muttrc \
+	.mutt/mailcap \
+	.mutt/mutt-colors-solarized-dark-16.muttrc \
+
+	-$(MKDIR) $(INTO)/.mutt
+
+	touch $(INTO)/.mutt/alias
+	touch $(INTO)/.mutt/muttrc.mailboxes
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-mutt-accounts
+install-mutt-accounts : \
+	.mutt/accounts/*[^~] \
+
+	-$(MKDIR) $(INTO)/.mutt/accounts
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
 
 .PHONY : install-readline
 install-readline : \
