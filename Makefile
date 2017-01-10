@@ -32,6 +32,7 @@ all : \
 	install-readline \
 	install-task \
 	install-xdg \
+	install-xresources \
 
 ## help			: Show this message
 .PHONY : help
@@ -203,6 +204,15 @@ install-xdg : \
 	.config/user-dirs.dirs \
 
 	-$(MKDIR) $(INTO)/.config
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-xresources
+install-xresources : \
+	.Xresources \
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
