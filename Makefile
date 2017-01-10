@@ -28,6 +28,8 @@ all : \
 	install-beets \
 	install-gnupg \
 	install-i3 \
+	install-ipython \
+	install-jupyter \
 	install-mail \
 	install-mercurial \
 	install-mpd \
@@ -119,6 +121,26 @@ install-gnupg : \
 	.gnupg/*[^~] \
 
 	-$(MKDIR) $(INTO)/.gnupg
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-ipython
+install-ipython : \
+	.ipython/profile_default/*[^~] \
+
+	-$(MKDIR) $(INTO)/.ipython/profile_default
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-jupyter
+install-jupyter : \
+	.jupyter/custom/*[^~] \
+
+	-$(MKDIR) $(INTO)/.jupyter/custom
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
