@@ -129,6 +129,7 @@ install-mail : \
 	install-mutt \
 	install-mutt-accounts \
 	install-msmtp \
+	install-offlineimap \
 
 .PHONY : install-mercurial
 install-mercurial : \
@@ -266,6 +267,17 @@ install-ncmpcpp : \
 	.config/ncmpcpp/*[^~] \
 
 	-$(MKDIR) $(INTO)/.config/ncmpcpp
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-offlineimap
+install-offlineimap : \
+	.config/offlineimap/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/offlineimap
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
