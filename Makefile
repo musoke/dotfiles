@@ -27,12 +27,19 @@ all : \
 	minimal \
 	install-beets \
 	install-gnupg \
+	install-i3 \
 	install-mail \
 	install-mercurial \
+	install-mpd \
+	install-ncmpcpp \
+	install-newsbeuter \
+	install-ranger \
 	install-readline \
 	install-task \
+	install-vimfx \
 	install-xdg \
 	install-xresources \
+	install-zathura \
 
 ## help			: Show this message
 .PHONY : help
@@ -213,6 +220,85 @@ install-xdg : \
 .PHONY : install-xresources
 install-xresources : \
 	.Xresources \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+# These only need files in an xdg-config-dir
+
+.PHONY : install-i3
+install-i3 : \
+	.config/i3/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/i3
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-newsbeuter
+install-newsbeuter : \
+	.config/newsbeuter/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/newsbeuter
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-mpd
+install-mpd : \
+	.config/mpd/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/mpd
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-ncmpcpp
+install-ncmpcpp : \
+	.config/ncmpcpp/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/ncmpcpp
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-ranger
+install-ranger : \
+	.config/ranger/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/ranger
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-vimfx
+install-vimfx : \
+	.config/vimfx/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/vimfx
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-zathura
+install-zathura : \
+	.config/zathura/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/zathura
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
