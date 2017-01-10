@@ -10,7 +10,7 @@ MKDIR = mkdir -p
 LN = ln -sfvb --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
 
 # Command to backup non-symlinks
-BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak$(shell date +%Y-%m-%d-%H-%M-%S)
+BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak-$(shell date +%Y-%m-%d-%H-%M-%S)
 
 ## minimal		: Install minimal selection of dotfiles
 .PHONY : minimal
