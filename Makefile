@@ -1,3 +1,7 @@
+## This Makefile installs my dotfiles.
+## By default, only a minimal selection is installed. The `all` target installs all.
+##
+
 # Location from which files will be linked
 FROM = $(shell pwd)
 # Location that will contain links
@@ -12,7 +16,7 @@ LN = ln -sfvb --suffix ~$(shell date +%Y-%m-%d-%H-%M-%S)
 # Command to backup non-symlinks
 BAK = [ ! -e $(1) ] || [ -h $(1) ] || mv -f $(1) $(1).bak-$(shell date +%Y-%m-%d-%H-%M-%S)
 
-## minimal		: Install minimal selection of dotfiles
+## minimal		: Install minimal selection of dotfiles: bash, bin, git, tmux, vim
 .PHONY : minimal
 minimal : \
 	install-bash \
@@ -147,6 +151,7 @@ install-jupyter : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
+## install-mail		: Symlink config for email toolchain
 .PHONY : install-mail
 install-mail : \
 	install-mutt \
@@ -172,7 +177,6 @@ install-msmtp : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
-## install-mutt		: Symlink config, create dirs, install config for deps
 .PHONY : install-mutt
 install-mutt : \
 	.mutt/muttrc \
