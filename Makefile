@@ -29,6 +29,7 @@ all : \
 	install-mail \
 	install-mercurial \
 	install-readline \
+	install-task \
 
 ## help			: Show this message
 .PHONY : help
@@ -168,6 +169,18 @@ install-mutt-accounts : \
 .PHONY : install-readline
 install-readline : \
 	.inputrc \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-task
+install-task : \
+	.taskrc \
+	.config/task/rc/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/task/rc
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
