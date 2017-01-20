@@ -1,0 +1,16 @@
+# Generic account specific settings
+# These get sourced the same way for each account; variables in them change.
+
+
+# Archive mail to "[GMail]/All Mail"/archive
+macro index,pager y "<save-message>$mbox<enter><enter>" "Archive"
+
+# Delete mail
+macro index,pager D \
+    "<save-message>$trash<enter>" \
+    "move message to the trash"
+
+# Move mail to spam
+macro index,pager S \
+    "<save-message>$my_spam<enter>"  \
+        "mark message as spam"
