@@ -15,5 +15,5 @@ source ~/.mutt/accounts/account-settings
 
 unalternates *
 alternates \
-    address@redacted \
-    address@redacted \
+    '^address@redacted$' \
+    '^address@redacted$' \
