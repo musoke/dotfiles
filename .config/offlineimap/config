@@ -27,7 +27,7 @@ maxsyncaccounts = 5
 
 ui = TTYUI
 
-pythonfile = ~/.mutt/offlineimap.py
+pythonfile = ~/.config/offlineimap/offlineimap.py
 
 
 ##################################################
@@ -222,10 +222,10 @@ nametrans = lambda folder: {'drafts':    '[Gmail]/Drafts',
 [Repository RemotePersonal]
 
 type = Gmail
-remoteusereval = get_credentials(account="personal@gmail.com",
+remoteusereval = get_credentials(account="personal",
                                  credential_type="user",
                                  directory="~/.mutt/accounts/")
-remotepasseval = get_credentials(account="personal@gmail.com",
+remotepasseval = get_credentials(account="personal",
                                  credential_type="password",
                                  directory="~/.mutt/accounts/")
 
