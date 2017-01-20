@@ -1,0 +1,16 @@
+set realname    = "Name"
+set from        = address@redacted"
+set sendmail    = "/usr/bin/msmtp -a test"
+# Where read mail in $spoolfile would be appended
+set mbox        = "+Test/archive"
+set postponed   = "+Test/drafts"
+set trash       = "+Test/trash"
+# Set where I store spam
+set my_spam     = "+Test/spam"
+
+color status green default
+
+source ~/.mutt/accounts/account-settings
+
+
+unalternates *

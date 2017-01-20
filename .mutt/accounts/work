@@ -1,0 +1,19 @@
+set realname    = "Nathan Musoke"
+set from        = address@redacted"
+set sendmail    = "/usr/bin/msmtp -a work"
+# Where read mail in $spoolfile would be appended
+set mbox        = "+Work/archive"
+set postponed   = "+Work/drafts"
+set trash       = "+Work/trash"
+# Set where I store spam
+set my_spam     = "+Work/spam"
+
+color status cyan default
+
+source ~/.mutt/accounts/account-settings
+
+
+unalternates *
+alternates \
+    address@redacted \
+    address@redacted \
