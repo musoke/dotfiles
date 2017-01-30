@@ -1,11 +1,12 @@
 #!/bin/sh
 REPOSITORY=/PATH/TO/REPO
 
+echo "Using repository: \"$REPOSITORY\""
 
 # Backup /home except some directories
 borg create -v --stats --progress                       \
     --compression zlib,6                                \
-    $REPOSITORY::'{hostname}-{now:%Y-%m-%d-%H-%M-%S}'   \
+    "$REPOSITORY"::'{hostname}-{now:%Y-%m-%d-%H-%M-%S}' \
     /home                                               \
     --exclude '/home/*/.ssh'                            \
     --exclude '/home/*/.gnupg/random_seed'              \
@@ -34,7 +35,7 @@ borg create -v --stats --progress                       \
 
 # Prune archives from this machine.
 borg prune -v --stats --list                            \
-    $REPOSITORY --prefix '{hostname}-'                  \
+    "$REPOSITORY" --prefix '{hostname}-'                \
     --keep-daily=7                                      \
     --keep-weekly=4                                     \
     --keep-monthly=12                                   \
