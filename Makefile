@@ -99,6 +99,15 @@ install-vim : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
+## install-YouCompleteMe  : set up YouCompleteMe code completions for vim
+# Currently assumes that dependencies are available: python-dev, libclang, go, rust.
+# Tested only on Arch Linux.
+.PHONY : install-YouCompleteMe
+install-YouCompleteMe :
+
+	cd ".vim/bundle/YouCompleteMe"; \
+	./install.py --clang-completer --system-libclang --gocode-completer --racer-completer
+
 ## install-git		: Configure local repo and symlink config
 .PHONY : install-git
 install-git : \
