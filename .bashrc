@@ -88,6 +88,9 @@ PATH=$HOME/bin:$PATH
 # add anaconda to PATH
 PATH=$HOME/anaconda3/bin:$PATH
 
+# add cargo to PATH
+PATH=$HOME/.cargo/bin:$PATH
+
 # Add location of ruby gems to end of path
 if hash ruby; then
     PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
