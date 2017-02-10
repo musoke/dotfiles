@@ -239,6 +239,17 @@ let g:vimtex_quickfix_mode = 2
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Configure UltiSnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsUsePythonVersion = 2
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Use solarized colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
