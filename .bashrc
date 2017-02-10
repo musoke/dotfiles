@@ -82,19 +82,5 @@ if [[ ! "$(uname -v)" =~ .*[Uu][Bb][Uu][Nn][Tt][Uu].* ]]
 fi
 #################################################
 
-# add ~/bin to PATH
-PATH=$HOME/bin:$PATH
-
-# add anaconda to PATH
-PATH=$HOME/anaconda3/bin:$PATH
-
-# add cargo to PATH
-PATH=$HOME/.cargo/bin:$PATH
-
-# Add location of ruby gems to end of path
-if hash ruby; then
-    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-fi
-
 # Display system info.
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
