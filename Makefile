@@ -52,6 +52,8 @@ all : \
 	install-xdg \
 	install-xresources \
 	install-zathura \
+	completion-beets \
+	completion-pandoc \
 
 ## help			: Show this message
 .PHONY : help
@@ -127,14 +129,18 @@ install-git : \
 .PHONY : install-beets
 install-beets : \
 	.config/beets/*[^~] \
+	completion-beets \
 
 	# Link config
-	if hash beet; then beet completion > $(HOME)/.beets-completion.bash; fi
-
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
+
+.PHONY : completion-beets
+completion-beets :
+
+	if hash beet; then beet completion > $(HOME)/.beets-completion.bash; fi
 
 .PHONY : install-gnupg
 install-gnupg : \
@@ -325,6 +331,11 @@ install-offlineimap : \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
+
+.PHONY : completion-pandoc
+completion-pandoc :
+
+	if hash pandoc; then pandoc --bash-completion > ~/.pandoc-completion.bash; fi
 
 .PHONY : install-ranger
 install-ranger : \
