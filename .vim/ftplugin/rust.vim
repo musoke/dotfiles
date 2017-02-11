@@ -15,3 +15,8 @@ set hidden
 " let g:racer_cmd = "~/.cargo/bin/racer"
 let $RUST_SRC_PATH="/usr/src/rust/src/"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Configure Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_rust_checkers = ['rustc']
