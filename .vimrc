@@ -239,6 +239,17 @@ let g:vimtex_quickfix_mode = 2
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configure YouCompleteMe
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>d :YcmCompleter GetDoc<CR>
+
+" Open result of GoTo* commands in horizontal split
+let g:ycm_goto_buffer_command = 'horizontal-split'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Configure UltiSnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
