@@ -45,6 +45,7 @@ all : \
 	install-mpd \
 	install-ncmpcpp \
 	install-newsbeuter \
+	install-pam-environment \
 	install-ranger \
 	install-readline \
 	install-task \
@@ -219,6 +220,15 @@ install-mutt-accounts : \
 	.mutt/accounts/*[^~] \
 
 	-$(MKDIR) $(INTO)/.mutt/accounts
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-pam-environment
+install-pam-environment : \
+	.pam_environment \
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
