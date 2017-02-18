@@ -2,7 +2,7 @@
 
 # Fetch the latest picture from Astronomy Picture of the Day and save to ~/.apod.jpg
 
-prefix=http://apod.nasa.gov/apod/
+prefix=https://apod.nasa.gov/apod/
 #postfix=ap160305.html
 postfix=astropix.html
 

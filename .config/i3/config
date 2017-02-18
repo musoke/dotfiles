@@ -203,8 +203,9 @@ bindsym $mod+B exec "firefox"
 
 # Set download the latest astronomy picture of the day and set it as the wallpaper.
 # Takes some time and may fail, so first set to the last wallpaper.
+# ~/.fehbg is created by feh when it runs; contains command last used to set background.
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id ~/bin/apod.sh ; feh --bg-scale ~/.apod.jpg
+exec --no-startup-id ~/bin/apod.sh ; feh --bg-max ~/.apod.jpg
 
 # Start dropbox when i3 starts.
 exec --no-startup-id dropbox start
