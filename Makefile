@@ -120,7 +120,7 @@ install-git : \
 	.git-completion.bash \
 
 	# Configure this git repo
-	git config --local include.path $(FROM)/.gitconfig_local
+	git config include.path $(FROM)/.gitconfig_local
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \

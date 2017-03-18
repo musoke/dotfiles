@@ -28,7 +28,7 @@ if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file (restore to previous version)
-  set undofile		" keep an undo file (undo changes after closing)
+  " set undofile		" keep an undo file (undo changes after closing)
 endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -129,7 +129,7 @@ set expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display relative line numbers
-set relativenumber
+" set relativenumber
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -198,7 +198,7 @@ endif
 " Important as I have *.add under version control on 
 " multiple machines.
 " http://vi.stackexchange.com/a/5052/6645
-for d in glob('~/.vim/spell/*.add', 1, 1)
+for d in ['~/.vim/spell/en.utf-8.add']
     if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
         silent exec 'mkspell! ' . fnameescape(d)
     endif
@@ -292,5 +292,8 @@ map <Leader>vq :w <CR> :VimuxRunLastCommand<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme solarized
-set colorcolumn=80
+" set colorcolumn=80
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+let g:jedi#auto_initialization = 0
