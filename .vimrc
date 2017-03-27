@@ -115,12 +115,6 @@ set expandtab
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Don't use two spaces at the end of a sentence
-set nojoinspaces
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap <Esc> to the easier to reach jk and kj
 :imap jk <Esc>
 :imap kj <Esc>
