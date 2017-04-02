@@ -164,6 +164,10 @@ def_key "h"
 def_key "l"
   next_column
 
+def_key "x"
+  delete_playlist_items
+
+
 ##### Default commands #####
 #
 #def_key "mouse"
