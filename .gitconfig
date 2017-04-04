@@ -9,6 +9,7 @@
 	co = checkout
 	br = branch
 	wdiff = diff --color-words
+    dc = diff --cached
 
 [merge]
 	ff = false
