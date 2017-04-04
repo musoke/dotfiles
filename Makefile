@@ -55,6 +55,7 @@ all : \
 	install-zathura \
 	completion-beets \
 	completion-pandoc \
+	completion-rustup \
 
 ## help			: Show this message
 .PHONY : help
@@ -379,3 +380,8 @@ install-zathura : \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
+
+.PHONY : completion-rustup
+completion-rustup :
+
+	if hash rustup; then rustup completions bash > ~/.rustup-completion.bash; fi

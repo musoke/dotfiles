@@ -41,15 +41,11 @@ export EDITOR="vim"
 # Specify a visual editor in environment variables
 export VISUAL="vim"
 
-# Use git-completion.bash so that git has autocomplete
+# Enable various bash completion
 if [ -f ~/.git-completion.bash ]; then source ~/.git-completion.bash; fi
-
-# Use beets-completion.bash
 if [ -f ~/.beets-completion.bash ]; then source ~/.beets-completion.bash; fi
-
-# Use pandoc-completion.bash
 if [ -f ~/.pandoc-completion.bash ]; then source ~/.pandoc-completion.bash; fi
-
+if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
 
 # Display system info.
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
