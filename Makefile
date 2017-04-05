@@ -48,6 +48,7 @@ all : \
 	install-pam-environment \
 	install-ranger \
 	install-readline \
+	install-rofi \
 	install-task \
 	install-vimfx \
 	install-xdg \
@@ -239,6 +240,17 @@ install-pam-environment : \
 .PHONY : install-readline
 install-readline : \
 	.inputrc \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-rofi
+install-rofi : \
+	.config/rofi/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/rofi
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
