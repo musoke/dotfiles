@@ -23,5 +23,9 @@ alias gdc='git diff --cached'
 ## Mutt
 alias m='mutt'
 
+alias of='offlineimap'
+alias off='offlineimap && offlineimap'
+
+
 ## Rsync
 alias rs='rsync --size-only --partial --progress'
