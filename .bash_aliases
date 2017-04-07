@@ -22,3 +22,6 @@ alias gdc='git diff --cached'
 
 ## Mutt
 alias m='mutt'
+
+## Rsync
+alias rs='rsync --size-only --partial --progress'
