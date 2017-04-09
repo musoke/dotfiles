@@ -4,6 +4,8 @@
 
 ## Set PATH
 
+PATH=$PATH:$HOME/.local/bin
+
 # add ~/bin to PATH
 PATH=$PATH:$HOME/bin
 
