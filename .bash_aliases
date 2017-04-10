@@ -28,4 +28,4 @@ alias off='offlineimap && offlineimap'
 
 
 ## Rsync
-alias rs='rsync --size-only --partial --progress'
+alias rs='rsync --size-only --partial --progress --compress'
