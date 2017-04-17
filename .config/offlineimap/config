@@ -108,7 +108,6 @@ footer = "\n"
 [DEFAULT]
 
 # Accounts
-status_backend = sqlite
 synclabels = yes
 #autorefresh = 5
 
