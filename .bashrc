@@ -46,3 +46,8 @@ for config in "$HOME"/.bashrc.d/*.bash ; do
     [[ -e "$config" ]] && source "$config"
 done
 unset -v config
+
+if [ $TERM=rvxt-unicode-256color ]; then
+    TERM=xterm
+    export $TERM
+fi
