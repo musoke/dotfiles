@@ -140,10 +140,13 @@ set relativenumber
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigate splits with CTRL+hjkl
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" These shortcuts are actually provided through vim-tmux-navigator.
+" https://github.com/christoomey/vim-tmux-navigator
+" May need to re-enable if that vim plugin is not installed.
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
