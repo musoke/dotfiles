@@ -4,3 +4,11 @@
 "\e[B": history-search-forward
 "\e[C": forward-char
 "\e[D": backward-char
+
+set editing-mode vi
+
+$if mode=vi
+    set keymap vi-insert
+    "kj": vi-movement-mode
+    "jk": vi-movement-mode
+$endif
