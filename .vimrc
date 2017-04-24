@@ -279,6 +279,16 @@ let g:syntastic_check_on_wq = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Configure vimux
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vq :VimuxRunLastCommand<CR>
+let g:VimuxUseNearest = 0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Use solarized colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
