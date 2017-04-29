@@ -1,14 +1,42 @@
-#This lets you use up and down arrows
-#  for incremental search
-"\e[A": history-search-backward
-"\e[B": history-search-forward
-"\e[C": forward-char
-"\e[D": backward-char
-
 set editing-mode vi
+
+set show-mode-in-prompt
+
+# Show * at beginning of line when in vi-cmd mode, nothing otherwise
+set vi-cmd-mode-string "*"
+set vi-ins-mode-string ""
+set emacs-mode-string ""
 
 $if mode=vi
     set keymap vi-insert
-    "kj": vi-movement-mode
-    "jk": vi-movement-mode
+        # Switch to normal mode
+        "kj": vi-movement-mode
+        "jk": vi-movement-mode
+        # Incremental search with up and down arrows
+        "\e[A": history-search-backward
+        "\e[B": history-search-forward
+
+        "\e[C": forward-char
+        "\e[D": backward-char
+        # Bind Alt-. to insert last argument, like in Emacs mode
+        "\e.": yank-last-arg
+
+    set keymap vi-command
+        # Incremental search with j, k, and up and down arrows
+        "j": history-search-forward
+        "k": history-search-backward
+        "\e[A": history-search-backward
+        "\e[B": history-search-forward
+
+        "\e[C": forward-char
+        "\e[D": backward-char
+$endif
+
+$if mode=emacs
+    #This lets you use up and down arrows for incremental search
+    "\e[A": history-search-backward
+    "\e[B": history-search-forward
+
+    "\e[C": forward-char
+    "\e[D": backward-char
 $endif
