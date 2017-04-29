@@ -73,9 +73,8 @@ update :
 install-bash : \
 	.bashrc \
 	.bash_profile \
-	.bash_aliases \
-	.bash_functions \
 	.bashrc_ubuntu \
+	.bashrc.d \
 	.profile
 
 	for f in $^; do \

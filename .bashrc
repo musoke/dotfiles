@@ -25,16 +25,6 @@ fi
 # Change the prompt
 PS1='[\[$(tput bold)$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput bold)$(tput setaf 2)\]\h\[$(tput sgr0)\] \[$(tput bold)$(tput setaf 4)\]\W\[$(tput sgr0)\]] \$ '
 
-# Bash aliases are found in ~/.bash_aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# Bash functions are found in ~/.bash_functions
-if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
-
 # Specify an editor in environment variables
 export EDITOR="vim"
 
@@ -49,3 +39,10 @@ if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
 
 # Display system info.
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
+
+# Load any supplementary scripts
+# Includes aliases, etc
+for config in "$HOME"/.bashrc.d/*.bash ; do
+    [[ -e "$config" ]] && source "$config"
+done
+unset -v config
