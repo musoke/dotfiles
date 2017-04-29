@@ -23,6 +23,7 @@ borg create -v --stats --progress                       \
     --exclude '/home/*/.dropbox-dist'                   \
     --exclude '/home/*/.conda'                          \
     --exclude '/home/*/.cargo'                          \
+    --exclude '/home/*/.rustup'                         \
     --exclude '/home/*/go'                              \
     --exclude '/home/*/.theano'                         \
     --exclude '/home/*/.gem'                            \
@@ -37,6 +38,6 @@ borg create -v --stats --progress                       \
 borg prune -v --stats --list                            \
     "$REPOSITORY" --prefix '{hostname}-'                \
     --keep-daily=7                                      \
-    --keep-weekly=4                                     \
+    --keep-weekly=8                                     \
     --keep-monthly=12                                   \
     --keep-yearly=10
