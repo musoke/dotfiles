@@ -4,11 +4,23 @@ library: ~/media/music/musiclibrary.blb
 asciify_paths: yes
 
 import:
-    move: no
+    move: yes
+    write: yes
     languages: en
 
+
+# The default replacements, plus " " -> "-"
+replace:
+    '[\\/]': _
+    '^\.': _
+    '[\x00-\x1f]': _
+    '[<>:"\?\*\|]': _
+    '\.$': _
+    '\s+$': ''
+    '^\s+': ''
+    '\s': '-'
+
 plugins: >
-    chroma
     fromfilename
     fetchart
     mbsync
