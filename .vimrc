@@ -281,9 +281,9 @@ let g:syntastic_check_on_wq = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Configure vimux
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vq :VimuxRunLastCommand<CR>
+map <Leader>vp :w <CR> :VimuxPromptCommand<CR>
+map <Leader>vl :w <CR> :VimuxRunLastCommand<CR>
+map <Leader>vq :w <CR> :VimuxRunLastCommand<CR>
 let g:VimuxUseNearest = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
