@@ -39,3 +39,6 @@ plugins: >
 
 fetchart:
     store_source: yes
+
+ipfs:
+  auto: no
