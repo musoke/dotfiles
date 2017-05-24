@@ -12,6 +12,9 @@
 	wdiff = diff --color-words
     dc = diff --cached
 
+    l = log
+    lp = log --patch
+
 [merge]
 	ff = false
 [core]
