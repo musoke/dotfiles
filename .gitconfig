@@ -8,6 +8,7 @@
 	ci = commit
 	co = checkout
 	br = branch
+	brm = branch --no-merge
 	wdiff = diff --color-words
     dc = diff --cached
 
