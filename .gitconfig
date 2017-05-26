@@ -1,24 +1,24 @@
 [user]
-	name = Nathan Musoke
-	email = nathan.musoke@gmail.com
+    name = Nathan Musoke
+    email = nathan.musoke@gmail.com
 [push]
-	default = simple
+    default = simple
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	br = branch
-	brm = branch --no-merge
-	wdiff = diff --color-words
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    brm = branch --no-merge
+    wdiff = diff --color-words
     dc = diff --cached
 
     l = log
     lp = log --patch
 
 [merge]
-	ff = false
+    ff = false
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
+    editor = vim
+    excludesfile = ~/.gitignore_global
 [color]
-	ui = auto
+    ui = auto
