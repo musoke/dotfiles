@@ -284,7 +284,6 @@ let g:syntastic_check_on_wq = 0
 map <Leader>vp :w <CR> :VimuxPromptCommand<CR>
 map <Leader>vl :w <CR> :VimuxRunLastCommand<CR>
 map <Leader>vq :w <CR> :VimuxRunLastCommand<CR>
-let g:VimuxUseNearest = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
