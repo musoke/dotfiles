@@ -2,8 +2,8 @@ set editing-mode vi
 
 set show-mode-in-prompt
 
-# Show * at beginning of line when in vi-cmd mode, nothing otherwise
-set vi-cmd-mode-string "*"
+# Show : at beginning of line when in vi-cmd mode, nothing otherwise
+set vi-cmd-mode-string ":"
 set vi-ins-mode-string ""
 set emacs-mode-string ""
 
