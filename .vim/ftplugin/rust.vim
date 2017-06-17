@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Config for rust.vim
+"" Config for rust.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:rustfmt_command = 'rustup run nightly rustfmt'
 " Run rustfmt on save
 let g:rustfmt_autosave = 1
 " Enable folding
