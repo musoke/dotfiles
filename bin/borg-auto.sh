@@ -17,6 +17,7 @@ borg create -v --stats --progress                       \
     --exclude '/home/*/.mpd/database'                   \
     --exclude '/home/*/.mpd/state'                      \
     --exclude '/home/*/.mozilla/firefox/*/Cache'        \
+    --exclude '/home/*/.config/chromium'                \
     --exclude '/home/*/.cache'                          \
     --exclude '/home/*/tmp'                             \
     --exclude '/home/*/.dropbox'                        \
