@@ -281,9 +281,9 @@ let g:syntastic_check_on_wq = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Configure vimux
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>vp :w <CR> :VimuxPromptCommand<CR>
-map <Leader>vl :w <CR> :VimuxRunLastCommand<CR>
-map <Leader>vq :w <CR> :VimuxRunLastCommand<CR>
+map <Leader>vp :w <CR>:VimuxPromptCommand<CR>
+map <Leader>vl :w <CR>:VimuxRunLastCommand<CR>
+map <Leader>vq :w <CR>:VimuxRunLastCommand<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
