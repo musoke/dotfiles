@@ -38,7 +38,7 @@ if [ -f ~/.pandoc-completion.bash ]; then source ~/.pandoc-completion.bash; fi
 if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
 
 # Display system info.
-if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
+# if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
 
 # Load any supplementary scripts
 # Includes aliases, etc

@@ -35,6 +35,7 @@ plugins: >
     fromfilename
     fetchart
     mbsync
+    duplicates
     ipfs
 
 fetchart:

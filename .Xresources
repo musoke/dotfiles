@@ -76,5 +76,5 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
 
-URxvt.url-select.launcher: /usr/bin/xdg-open
+!URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.keysym.M-u: perl:url-select:select_next

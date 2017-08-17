@@ -1,5 +1,6 @@
 #!/bin/sh
-REPOSITORY=/PATH/TO/REPO
+# REPOSITORY=/media/VERBATIM\ HD/borg-repo
+REPOSITORY=/media/Elements/borg-repo
 
 echo "Using repository: \"$REPOSITORY\""
 
