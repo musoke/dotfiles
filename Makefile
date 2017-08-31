@@ -82,6 +82,18 @@ install-bash : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
+# bash_completion	: create dir for bash completions
+.PHONY : bash_completion
+bash_completion :
+	$(MKDIR) $(INTO)/.bash_completion.d
+
+## completions		: generate_completions
+.PHONY : completions
+completions : \
+	completion-beets \
+	completion-pandoc \
+	completion-rustup \
+
 ## install-bin		: Symlink bin
 .PHONY : install-bin
 install-bin : bin/*[^~]
@@ -117,7 +129,7 @@ install-YouCompleteMe :
 install-git : \
 	.gitconfig \
 	.gitignore_global \
-	.git-completion.bash \
+	.bash_completion.d/git.bash-completion \
 
 	# Configure this git repo
 	git config --local include.path $(FROM)/.gitconfig_local
@@ -140,9 +152,10 @@ install-beets : \
 	done
 
 .PHONY : completion-beets
-completion-beets :
+completion-beets : \
+	bash_completion
 
-	if hash beet; then beet completion > $(HOME)/.beets-completion.bash; fi
+	if hash beet; then beet completion > $(HOME)/.bash_completion.d/beets.bash-completion; fi
 
 .PHONY : install-gnupg
 install-gnupg : \
@@ -355,9 +368,10 @@ install-offlineimap : \
 	done
 
 .PHONY : completion-pandoc
-completion-pandoc :
+completion-pandoc : \
+	bash_completion
 
-	if hash pandoc; then pandoc --bash-completion > ~/.pandoc-completion.bash; fi
+	if hash pandoc; then pandoc --bash-completion > ~/.bash_completion.d/pandoc-completion.bash; fi
 
 .PHONY : install-ranger
 install-ranger : \
@@ -393,6 +407,7 @@ install-zathura : \
 	done
 
 .PHONY : completion-rustup
-completion-rustup :
+completion-rustup : \
+	bash_completion
 
-	if hash rustup; then rustup completions bash > ~/.rustup-completion.bash; fi
+	if hash rustup; then rustup completions bash > ~/.bash_completion.d/rustup-completion.bash; fi
