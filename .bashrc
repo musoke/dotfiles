@@ -37,6 +37,9 @@ if [ -f ~/.beets-completion.bash ]; then source ~/.beets-completion.bash; fi
 if [ -f ~/.pandoc-completion.bash ]; then source ~/.pandoc-completion.bash; fi
 if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
 
+# Set RUST_SRC_PATH for RLS
+export RUST_SRC_PATH=~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
+
 # Display system info.
 # if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
 
