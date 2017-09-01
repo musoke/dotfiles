@@ -58,9 +58,6 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule ".vim/bundle/tmux-navigator"]
 	path = .vim/bundle/tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
