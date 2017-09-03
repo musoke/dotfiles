@@ -22,6 +22,7 @@ let g:rust_fold = 1
 set hidden
 " let g:racer_cmd = "~/.cargo/bin/racer"
 let $RUST_SRC_PATH="/usr/src/rust/src/"
+let $RUST_SRC_PATH="~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -33,5 +34,5 @@ let g:ycm_rust_src_path = '/usr/src/rust/src'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Configure Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_rust_checkers = ['cargo']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
