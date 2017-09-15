@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+latexdiff-vc --pdf --append-textcmd="re,nm,todo,$2" --git -r $1 *.tex
