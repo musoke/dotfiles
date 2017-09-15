@@ -249,6 +249,17 @@ install-pam-environment : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
+.PHONY : install-project_init
+install-project_init : \
+	.pi.toml
+
+	-$(MKDIR) $(INTO)/.pi_templates
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
 .PHONY : install-readline
 install-readline : \
 	.inputrc \
