@@ -195,6 +195,7 @@ install-jupyter-nbextensions : \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
+	jupyter nbextension enable vim_binding/vim_binding
 
 
 ## install-mail		: Symlink config for email toolchain
