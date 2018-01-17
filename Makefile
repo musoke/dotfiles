@@ -179,13 +179,32 @@ install-ipython : \
 
 .PHONY : install-jupyter
 install-jupyter : \
+	install-jupyter-custom \
+	install-jupyter-nbextensions \
+
+.PHONY : install-jupyter-custom
+install-jupyter-custom : \
 	.jupyter/custom/*[^~] \
 
 	-$(MKDIR) $(INTO)/.jupyter/custom
+	-$(MKDIR) $(INTO)/.jupyter/nbextensions
+
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
+
+.PHONY : install-jupyter-nbextensions
+install-jupyter-nbextensions : \
+	.local/share/jupyter/nbextensions/*[^~] \
+
+	-$(MKDIR) $(INTO)/.local/share/jupyter/nbextensions
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
 
 ## install-mail		: Symlink config for email toolchain
 .PHONY : install-mail

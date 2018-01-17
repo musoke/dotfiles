@@ -70,3 +70,6 @@
 [submodule ".vim/bundle/vim-editorconfig"]
 	path = .vim/bundle/vim-editorconfig
 	url = https://github.com/sgur/vim-editorconfig.git
+[submodule ".local/share/jupyter/nbextensions/vim_binding"]
+	path = .local/share/jupyter/nbextensions/vim_binding
+	url = https://github.com/musoke/jupyter-vim-binding
