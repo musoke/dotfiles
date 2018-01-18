@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/vim-lsp"]
 	path = .vim/bundle/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule ".local/share/jupyter/nbextensions/vim_binding"]
+	path = .local/share/jupyter/nbextensions/vim_binding
+	url = https://github.com/musoke/jupyter-vim-binding

@@ -16,6 +16,7 @@ alias la='ls -lhFA --color=auto'
 alias gst='git status'
 alias gl='git log'
 alias glp='git log --patch'
+alias glpw='git log --patch --color-words'
 alias glg='git log --graph'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -29,3 +30,7 @@ alias off='offlineimap && offlineimap'
 
 ## Rsync
 alias rs='rsync --size-only --partial --progress --compress'
+
+
+## tail
+alias tf='tail -f'
