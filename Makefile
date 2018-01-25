@@ -231,6 +231,8 @@ install-mutt : \
 	.mutt/mutt-colors-solarized-dark-16.muttrc \
 
 	-$(MKDIR) $(INTO)/.mutt
+	-$(MKDIR) $(INTO)/.mutt/cache/headers
+	-$(MKDIR) $(INTO)/.mutt/cache/bodies
 
 	touch $(INTO)/.mutt/alias
 	touch $(INTO)/.mutt/muttrc.mailboxes
