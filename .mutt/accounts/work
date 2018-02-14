@@ -1,19 +1,22 @@
-set realname    = "Nathan Musoke"
-set from        = address@redacted"
-set sendmail    = "/usr/bin/msmtp -a work"
-# Where read mail in $spoolfile would be appended
-set mbox        = "+Work/archive"
-set postponed   = "+Work/drafts"
-set trash       = "+Work/trash"
-# Set where I store spam
-set my_spam     = "+Work/spam"
+-----BEGIN PGP MESSAGE-----
 
-color status cyan default
-
-source ~/.mutt/accounts/account-settings
-
-
-unalternates *
-alternates \
-    '^address@redacted$' \
-    '^address@redacted$' \
+hQIMAwAAAAAAAAAAAQ//eMzf35MZeA3f6gTaNzz0CB1BIqYMffOeYjgbC9XRbfXz
+vecd5LSVZomjsbt/6rkSmlFOwH5JRwj/KnrTAM+BY/qpraNvT1Crp7nfqNKhkNYb
+xxxhDpqdd4FE62vLSTTBgXFanfp8YrAXoPY+dAUtnPwThTAjKQ1b5vzHvZ8pffU9
+5O1Cx2mcTHAiS0+/PBeYHccyj9c6+cLyDYusWY/WfzFXBHrEwEv/PAwd5IeQGjn/
+CsfCEuPWGGElDBLSYJFrPYcIfz7PMR0/Fl4rvGKLE1jF1gfsmm5Tox68L1Ol1IvP
+FUmxFChwLMTG6kiFtUeNfdgcVoGiFohxYt8MeU75YDODFFuMnW3CON3e0zLbNTqK
+PWIXRiu721gw48d4Kvcx2Kj7Biwy0R4JQWrHuJxPxedT7KilfJLoNJkWvnEkNaEv
+ht6yVU0Oc+ovAeT0j8XT+idzu75BwT9RYswFsB8SPT/xulDe8ERQUupiunLV4sQt
+ZretbVjLkE2KiEpamaB7p+hy2JbmlB31ZDNBJHF1W0/VQEql8hOIxvw16Qa4ApNP
+LaGvFM9uCCRTvSuLSc/0t1hXFQ/CyhiPQJtG9D93MdVpxI9O32BUeMXqLJzWWClT
+6Cs4hAFvfRsM4SgbeZGU+LWGjJPNTqm5HpMc3chzEQy/Tf97RKwlvvgs57wl6M3S
+wIgBbSyFalmf9uIcjExaULDHbzttIwnMdX7OaL1mSf0tIrWo62A0HZAYqnO+ltBl
+aYdylI8AmmR6cNSkEfCQm4arZf+LbDcZsih6kjMSYkB1FQn+aG6tfb67cIj4/dB0
+6Mdxv01rSNJYZWAsrx1IuSGGgGMU8nFh37KONYaOXGykCoy1n85SV/dsxRrQtGxA
+EpJK9wt3pc0hL9arbomQ7S9FzKlhjw54/bCaTQ2FZm2JfcW1Yd3xCsU/pMo5D6B+
+QszpuHvTIzbEXrvt12Rsl6h7c1VmY8VcEcJAqDD5aEscPkMBPajEyIJjemyfBkKM
+WOlRaVqv/YkGiRj96gcmWCZbNKZ8r2tFfDG6rGrt/JtF5PnhFebqxWEzEtkIP1QE
+XVLEmT817C2GsweqBTARXAEdtcAgjZ97K2PjwEjcl8HlwrBpgqyD9/wq
+=dHYt
+-----END PGP MESSAGE-----
