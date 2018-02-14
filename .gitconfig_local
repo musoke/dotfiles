@@ -5,7 +5,3 @@ clean = "sed -e 's/\\(^password\\s*\\)\".*@\\(.*\\)\"/#\\1\"PASSWORD_TODO@\\2\"/
 
 [filter "remove-pass-ncmpcpp"]
 clean = "sed -e 's/\\(^mpd_host\\s*=\\s*\\).*@\\(.*\\)/#\\1PASSWORD_TODO@\\2/'"
-
-[filter "remove-email-address"]
-# Pretty crude, but I don't have any fancy adresses
-clean = "sed -e 's/[0-9a-Z._-+]*@[0-9a-Z.]*/address@redacted/'"

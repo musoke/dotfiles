@@ -1,2 +1,0 @@
-#!/bin/sh
-gpg -d -q --batch --no-tty "$1" || cat $1 
