@@ -23,3 +23,6 @@
     excludesfile = ~/.gitignore_global
 [color]
     ui = auto
+
+[diff "gpg"]
+    textconv = gpg-decrypt
