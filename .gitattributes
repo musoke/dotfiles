@@ -4,4 +4,4 @@
 
 # Remove email addresses from mail config
 .mutt/accounts/* filter=encrypt diff=encrypt
-.msmtprc         filter=remove-email-address
+.msmtprc         filter=encrypt diff=encrypt
