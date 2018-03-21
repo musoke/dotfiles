@@ -5,3 +5,4 @@ version = "0.1.0"        # start new projects at version 0.1.0
 name = "Nathan Musoke"
 email = "nathan.musoke@gmail.com"
 github_username = "musoke"
+version_control = "git"
