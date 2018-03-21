@@ -25,10 +25,4 @@
     ui = auto
 
 [diff "gpg"]
-    textconv = "gpg -d -q --batch --no-tty $1 || cat $1"
-
-[filter "encrypt"]
-    smudge = "gpg -d -q --batch --no-tty || cat"
-    clean = "gpg -ea -q --batch --no-tty --hidden-recipient 0x385B75C7327E99DC"
-[diff "encrypt"]
-    textconv = "gpg -d -q --batch --no-tty $1 || cat $1"
+    textconv = gpg-decrypt

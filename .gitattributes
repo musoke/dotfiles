@@ -3,5 +3,5 @@
 .config/ncmpcpp/config filter=remove-pass-ncmpcpp
 
 # Remove email addresses from mail config
-.mutt/accounts/* filter=encrypt diff=encrypt
-.msmtprc         filter=encrypt diff=encrypt
+.mutt/accounts/* filter=remove-email-address
+.msmtprc         filter=remove-email-address
