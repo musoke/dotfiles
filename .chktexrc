@@ -681,8 +681,13 @@ ItalCmd
 #
 
 PostLink
+# {
+#     \index \label
+# }
+=
+# Allow label: I have never found it to be other than annoying
 {
-    \index \label
+    \index
 }
 
 #####################################################################
