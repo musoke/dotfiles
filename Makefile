@@ -36,6 +36,7 @@ minimal : \
 all : \
 	minimal \
 	install-beets \
+	install-chktex \
 	install-gnupg \
 	install-i3 \
 	install-ipython \
@@ -86,6 +87,15 @@ install-bash : \
 .PHONY : bash_completion
 bash_completion :
 	$(MKDIR) $(INTO)/.bash_completion.d
+
+## chktex			: link .chktexrc
+install-chktex : .chktexrc
+
+	# Link config
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
 
 ## completions		: generate_completions
 .PHONY : completions
