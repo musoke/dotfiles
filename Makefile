@@ -131,6 +131,7 @@ install-git : \
 	.gitconfig \
 	.gitignore_global \
 	.bash_completion.d/git.bash-completion \
+	bash_completion \
 
 	# Configure this git repo
 	git config --local include.path $(FROM)/.gitconfig_local
