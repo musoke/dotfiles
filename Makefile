@@ -30,6 +30,7 @@ minimal : \
 	install-git \
 	install-tmux \
 	install-vim \
+	install-readline \
 
 ## all			: Install all dotfiles
 .PHONY : all
