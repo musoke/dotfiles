@@ -18,6 +18,8 @@
 
 [merge]
     ff = false
+[diff]
+    compaction-heuristic = true
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
