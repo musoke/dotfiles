@@ -10,8 +10,13 @@ Session.vim
 # temporary
 .netrwhist
 *~
+#################################################
 # auto-generated tag files
 tags
 
 # Python
 *.egg-info
+
+#################################################
+# Visual Studio Code
+.vscode
