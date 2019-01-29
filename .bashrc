@@ -49,3 +49,8 @@ for config in "$HOME"/.bashrc.d/*.bash ; do
     [[ -e "$config" ]] && source "$config"
 done
 unset -v config
+
+for comp in "$HOME"/.bash_completion.d/*.bash-completion ; do
+    [[ -e "$comp" ]] && source "$comp"
+done
+unset -v comp
