@@ -12,3 +12,6 @@ Session.vim
 *~
 # auto-generated tag files
 tags
+
+# Python
+*.egg-info
