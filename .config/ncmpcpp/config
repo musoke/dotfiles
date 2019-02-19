@@ -129,7 +129,7 @@ mpd_music_dir = ~/media/music
 ## Time of inactivity (in seconds) after playlist
 ## highlighting will be disabled (0 = always on).
 ##
-#playlist_disable_highlight_delay = 5
+playlist_disable_highlight_delay = 0
 #
 ## Defines how long messages are supposed to be visible.
 ##
@@ -215,11 +215,9 @@ mpd_music_dir = ~/media/music
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
-#now_playing_prefix = $b
-now_playing_prefix = $b$u
+now_playing_prefix = $r$b
 #
-#now_playing_suffix = $/b
-now_playing_suffix = $/b$/u
+now_playing_suffix = $/r$/b
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -518,7 +516,7 @@ song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)
 #
 #color2 = green
 #
-#main_window_highlight_color = yellow
+main_window_highlight_color = green
 #
 #progressbar_color = black
 #
