@@ -82,3 +82,6 @@
 [submodule ".local/share/jupyter/nbextensions/vim_binding"]
 	path = .local/share/jupyter/nbextensions/vim_binding
 	url = https://github.com/musoke/jupyter-vim-binding
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
