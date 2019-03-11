@@ -34,3 +34,6 @@ alias rs='rsync --size-only --partial --progress --compress'
 
 ## tail
 alias tf='tail -f'
+
+## youtube-dl
+alias yd='youtube-dl --restrict-filenames -x --prefer-free'
