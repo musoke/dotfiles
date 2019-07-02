@@ -207,9 +207,6 @@ bindsym $mod+B exec "firefox-nightly"
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id ~/bin/apod.sh ; feh --bg-max ~/.apod.jpg
 
-# Start dropbox when i3 starts.
-exec --no-startup-id dropbox start
-
 # Shortcut to show ipython in a floating window
 for_window [title="Calculator"] floating enable
 bindsym $mod+c exec urxvt -title taskwin -e ipython
