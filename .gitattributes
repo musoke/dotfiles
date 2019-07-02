@@ -1,7 +1,0 @@
-# Remove passwords from some config files
-.config/mpd/mpd.conf filter=remove-pass-mpd
-.config/ncmpcpp/config filter=remove-pass-ncmpcpp
-
-# Remove email addresses from mail config
-.mutt/accounts/* filter=remove-email-address
-.msmtprc         filter=remove-email-address
