@@ -19,6 +19,7 @@
     lp = log --patch
     lpw = log --patch --color-words
 
+    ap = add --patch
 [merge]
     ff = false
 [diff]
