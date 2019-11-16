@@ -4,7 +4,5 @@ set recolor-lightcolor "#002b36"
 map + zoom in
 map - zoom out
 
-adjust_window width
-
 # Default is ', can use that too
 map ` mark_evaluate
