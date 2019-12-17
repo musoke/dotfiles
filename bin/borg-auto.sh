@@ -34,7 +34,7 @@ borg create -v --stats --progress                       \
     --exclude '/home/*/.recently-used.xbel'             \
     --exclude '/home/*/.thumbnails'                     \
     --exclude '/home/*/.Xauthority'                     \
-    --exclude '/home/*/snap'                            \
+    --exclude '/home/*/snap'
 
 
 # Prune archives from this machine.
