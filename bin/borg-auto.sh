@@ -43,4 +43,4 @@ borg prune -v --stats --list                            \
     --keep-daily=7                                      \
     --keep-weekly=8                                     \
     --keep-monthly=12                                   \
-    --keep-yearly=10
+    --keep-yearly=80
