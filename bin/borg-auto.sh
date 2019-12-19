@@ -34,6 +34,9 @@ borg create -v --stats --progress                       \
     --exclude '/home/*/.recently-used.xbel'             \
     --exclude '/home/*/.thumbnails'                     \
     --exclude '/home/*/.Xauthority'                     \
+    --exclude '/home/*/.local/share/Trash'              \
+    --exclude '/home/*/.local/share/flatpak'            \
+    --exclude '/home/*/.AndroidStudio*'            \
     --exclude '/home/*/snap'
 
 
