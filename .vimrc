@@ -230,19 +230,6 @@ let g:tex_flavor = "latex"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" For vimtex
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable folding
-let g:vimtex_fold_enabled=1
-" Enable folding of multiline comments
-let g:vimtex_fold_comments=1
-let g:vimtex_view_method = 'zathura'
-let g:vimtex_quickfix_ignore_all_warnings = 1
-let g:vimtex_quickfix_mode = 2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure YouCompleteMe
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>g :YcmCompleter GoTo<CR>
