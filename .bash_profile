@@ -6,7 +6,7 @@
 # This is where my PATH and some other variables are set
 if [ -r ~/.profile ]; then . ~/.profile; fi
 
-## Source bashrc if the shell if interactive
+## Source bashrc if the shell is interactive
 # Sets bash aliases, etc.
 case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
 

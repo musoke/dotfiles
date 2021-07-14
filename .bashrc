@@ -2,6 +2,11 @@
 # ~/.bashrc
 #
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -9,8 +14,8 @@
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -31,17 +36,8 @@ export EDITOR="vim"
 # Specify a visual editor in environment variables
 export VISUAL="vim"
 
-# Enable various bash completion
-if [ -f ~/.git-completion.bash ]; then source ~/.git-completion.bash; fi
-if [ -f ~/.beets-completion.bash ]; then source ~/.beets-completion.bash; fi
-if [ -f ~/.pandoc-completion.bash ]; then source ~/.pandoc-completion.bash; fi
-if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
-
 # Set RUST_SRC_PATH for RLS
 export RUST_SRC_PATH=~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
-
-# Display system info.
-# if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
 
 # Load any supplementary scripts
 # Includes aliases, etc
@@ -49,6 +45,12 @@ for config in "$HOME"/.bashrc.d/*.bash ; do
     [[ -e "$config" ]] && source "$config"
 done
 unset -v config
+
+# Enable various bash completion
+if [ -f ~/.git-completion.bash ]; then source ~/.git-completion.bash; fi
+if [ -f ~/.beets-completion.bash ]; then source ~/.beets-completion.bash; fi
+if [ -f ~/.pandoc-completion.bash ]; then source ~/.pandoc-completion.bash; fi
+if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
 
 for comp in "$HOME"/.bash_completion.d/*.bash-completion ; do
     [[ -e "$comp" ]] && source "$comp"
