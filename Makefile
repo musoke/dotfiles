@@ -36,6 +36,7 @@ minimal : \
 .PHONY : all
 all : \
 	minimal \
+	install-alacritty \
 	install-beets \
 	install-chktex \
 	install-gnupg \
@@ -288,6 +289,17 @@ install-project_init : \
 .PHONY : install-readline
 install-readline : \
 	.inputrc \
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
+
+.PHONY : install-alacritty
+install-alacritty : \
+	.config/alacritty/*[^~] \
+
+	-$(MKDIR) $(INTO)/.config/alacritty
 
 	for f in $^; do \
 		$(call BAK, $(INTO)/$$f); \
