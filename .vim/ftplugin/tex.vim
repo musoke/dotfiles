@@ -13,10 +13,8 @@ inoremap <silent> `2 `2<c-r>=UltiSnips#Anon('\sqrt{$1}$0', '`2', '', 'i')<cr>
 " Enable folding
 let g:vimtex_fold_enabled=1
 " Enable folding of multiline comments
-let g:vimtex_fold_comments=1
 let g:vimtex_view_method = 'zathura'
 
-let g:vimtex_quickfix_ignore_all_warnings = 1
 let g:vimtex_quickfix_mode = 2
 
 
