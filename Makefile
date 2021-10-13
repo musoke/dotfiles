@@ -42,6 +42,7 @@ all : \
 	install-gnupg \
 	install-i3 \
 	install-ipython \
+	install-julia \
 	install-jupyter \
 	install-mail \
 	install-mercurial \
@@ -210,6 +211,17 @@ install-jupyter-nbextensions : \
 	done
 	jupyter nbextension enable vim_binding/vim_binding
 
+
+.PHONY : install-julia
+install-julia: \
+	.julia/config/*[^~] \
+
+	-$(MKDIR) $(INTO)/.julia/config
+
+	for f in $^; do \
+		$(call BAK, $(INTO)/$$f); \
+		$(LN) $(FROM)/$$f $(INTO)/$$f; \
+	done
 
 ## install-mail		: Symlink config for email toolchain
 .PHONY : install-mail
