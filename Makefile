@@ -86,11 +86,6 @@ install-bash : \
 		$(LN) $(FROM)/$$f $(INTO)/$$f; \
 	done
 
-# bash_completion	: create dir for bash completions
-.PHONY : bash_completion
-bash_completion :
-	$(MKDIR) $(INTO)/.bash_completion.d
-
 ## chktex			: link .chktexrc
 install-chktex : .chktexrc
 
@@ -133,7 +128,7 @@ install-vim : \
 install-git : \
 	.gitconfig \
 	.gitignore_global \
-	.bash_completion.d/git.bash-completion \
+	.git.bash-completion \
 	bash_completion \
 
 	# Configure this git repo
