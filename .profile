@@ -16,8 +16,8 @@ PATH=$PATH:$HOME/.cargo/bin
 # PATH=$PATH:$HOME/julia-1.6.1/bin
 
 # add ruby gems to path
-if hash ruby; then
-    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-fi
+# if hash ruby; then
+#     PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+# fi
 
 export PATH
