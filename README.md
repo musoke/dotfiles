@@ -2,16 +2,17 @@
 
 ## Installation
 
-Use 
+Use
 ```
 git clone --recursive git@github.com:nathanmusoke/dotfiles.git
 ```
 to clone the repository and submodules.
 
-There is a script `install.sh` included which will create symlinks from `~` to the dotfiles.
-This should backup existing files `~/foo/bar` to `~/foo/bar~YYYY-MM-DD-HH-MM-SS`.
-At this point it also needs to be run from the root of the git repository.
-
+Use stow to symlink files to the appropriate locations. For example, to install
+git configuration:
+```
+stow git
+```
 
 ## Vim
 
