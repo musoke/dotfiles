@@ -41,7 +41,7 @@
 	path = .vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
 [submodule ".mutt/mutt-colors-solarized"]
-	path = .mutt/mutt-colors-solarized
+	path = mutt/.mutt/mutt-colors-solarized
 	url = git@github.com:nathanmusoke/mutt-colors-solarized.git
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/bundle/rust.vim
@@ -77,7 +77,7 @@
 	path = .vim/bundle/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
 [submodule ".local/share/jupyter/nbextensions/vim_binding"]
-	path = .local/share/jupyter/nbextensions/vim_binding
+	path = ipython/.local/share/jupyter/nbextensions/vim_binding
 	url = https://github.com/musoke/jupyter-vim-binding
 [submodule ".vim/bundle/julia-vim"]
 	path = .vim/bundle/julia-vim
