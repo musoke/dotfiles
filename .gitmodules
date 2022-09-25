@@ -1,6 +1,6 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = vim/.vim/bundle/vim-pathogen
-	url = http://github.com/tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen.git
 [submodule ".vim/bundle/SimpylFold"]
 	path = vim/.vim/bundle/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
@@ -30,7 +30,7 @@
 	url = https://github.com/honza/vim-snippets.git
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = vim/.vim/bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/vim-searchant"]
 	path = vim/.vim/bundle/vim-searchant
 	url = https://github.com/timakro/vim-searchant.git
@@ -81,7 +81,7 @@
 	url = https://github.com/musoke/jupyter-vim-binding
 [submodule ".vim/bundle/julia-vim"]
 	path = vim/.vim/bundle/julia-vim
-	url = git://github.com/JuliaEditorSupport/julia-vim.git
+	url = https://github.com/JuliaEditorSupport/julia-vim.git
 [submodule "vim/.vim/bundle/JuliaFormatter.vim"]
 	path = vim/.vim/bundle/JuliaFormatter.vim
 	url = https://github.com/kdheepak/JuliaFormatter.vim.git
