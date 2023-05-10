@@ -39,6 +39,9 @@ export VISUAL="vim"
 # Set RUST_SRC_PATH for RLS
 export RUST_SRC_PATH=~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 
+# Julia default threads
+export JULIA_NUM_THREADS=auto
+
 # Load any supplementary scripts
 # Includes aliases, etc
 for config in "$HOME"/.bashrc.d/*.bash ; do
