@@ -1,4 +1,7 @@
-using OhMyREPL
+if isinteractive()
+    using OhMyREPL
+end
+
 using Revise
 
 function template()
