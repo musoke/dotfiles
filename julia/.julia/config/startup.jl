@@ -1,5 +1,6 @@
 if isinteractive()
     using OhMyREPL
+    using VimBindings
 end
 
 using Revise
