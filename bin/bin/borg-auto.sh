@@ -50,7 +50,9 @@ borg create -v --stats --progress                       \
     --exclude '/home/*/.Android*'                       \
     --exclude '/home/*/anaconda*'                       \
     --exclude '/home/*/snap'                            \
-    --exclude '/home/*/media/videos/movies'
+    --exclude '/home/*/media/videos/movies' \
+    --exclude '/home/*/Videos' \
+    --exclude '*.npy'
 
 
 # Prune archives from this machine.
