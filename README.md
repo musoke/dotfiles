@@ -4,7 +4,7 @@
 
 Use
 ```
-git clone --recursive git@github.com:nathanmusoke/dotfiles.git
+git clone --recursive git@github.com:musoke/dotfiles.git
 ```
 to clone the repository and submodules.
 
