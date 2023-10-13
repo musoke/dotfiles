@@ -54,6 +54,7 @@ if [ -f ~/.git-completion.bash ]; then source ~/.git-completion.bash; fi
 if [ -f ~/.beets-completion.bash ]; then source ~/.beets-completion.bash; fi
 if [ -f ~/.pandoc-completion.bash ]; then source ~/.pandoc-completion.bash; fi
 if [ -f ~/.rustup-completion.bash ]; then source ~/.rustup-completion.bash; fi
+if [ -f ~/.bash_completion.d/julia-completion.bash ]; then source ~/.bash_completion.d/julia-completion.bash; fi
 
 for comp in "$HOME"/.bash_completion.d/*.bash-completion ; do
     [[ -e "$comp" ]] && source "$comp"
