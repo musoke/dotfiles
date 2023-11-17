@@ -45,7 +45,7 @@
 	url = git@github.com:nathanmusoke/mutt-colors-solarized.git
 [submodule ".vim/bundle/rust.vim"]
 	path = vim/.vim/bundle/rust.vim
-	url = git@github.com:nathanmusoke/rust.vim.git
+	url = https://github.com/rust-lang/rust.vim.git
 [submodule ".vim/bundle/vim-trailing-whitespace"]
 	path = vim/.vim/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace
