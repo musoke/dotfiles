@@ -17,6 +17,8 @@ let g:vimtex_view_method = 'zathura'
 
 let g:vimtex_quickfix_mode = 2
 
+" don't spellcheck inside comments
+let g:vimtex_syntax_nospell_comments = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable callbacks to remove a warning
