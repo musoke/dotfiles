@@ -37,3 +37,6 @@ alias tf='tail -f'
 
 ## youtube-dl
 alias yd='youtube-dl --restrict-filenames -x --prefer-free'
+
+## Slurm
+alias sq='squeue -u $(whoami)'
