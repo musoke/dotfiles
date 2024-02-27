@@ -85,3 +85,6 @@
 [submodule "vim/.vim/bundle/JuliaFormatter.vim"]
 	path = vim/.vim/bundle/JuliaFormatter.vim
 	url = https://github.com/kdheepak/JuliaFormatter.vim.git
+[submodule "vim/.vim/bundle/vim-lsp-julia"]
+	path = vim/.vim/bundle/vim-lsp-julia
+	url = https://github.com/machakann/vim-lsp-julia.git
