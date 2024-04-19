@@ -10,24 +10,27 @@ catch err
 end
 
 
-function template()
-    @eval begin
-        using PkgTemplates
-        Template(
-            user = "musoke",
-            plugins = [
-                Tests(project=true),
-                GitHubActions(extra_versions=["1.8", "nightly"]),
-                GitHubPages(),
-                Codecov(),
-                Documenter{GitHubActions}(),
-                Git(ssh = true),
-                TravisCI(),
-                Dependabot(),
-                Develop(),
-                Citation(readme=true),
-                RegisterAction(),
-            ],
-        )
+if isinteractive()
+    function template()
+        @eval begin
+            using PkgTemplates
+            Template(
+                user = "musoke",
+                julia = v"1.10.0",
+                plugins = [
+                    Tests(project = true),
+                    GitHubActions(extra_versions = ["1", "nightly"]),
+                    GitHubPages(),
+                    Codecov(),
+                    Documenter{GitHubActions}(),
+                    Git(ssh = true),
+                    TravisCI(),
+                    Dependabot(),
+                    Develop(),
+                    Citation(readme = true),
+                    RegisterAction(),
+                ],
+            )
+        end
     end
 end
