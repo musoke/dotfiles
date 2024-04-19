@@ -1,9 +1,14 @@
-if isinteractive()
-    using OhMyREPL
-    using VimBindings
+try
+    if isinteractive()
+        using OhMyREPL
+        using VimBindings
+    end
+
+    using Revise
+catch err
+    @warn "Error loading startup packages" err
 end
 
-using Revise
 
 function template()
     @eval begin
