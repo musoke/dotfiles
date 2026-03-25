@@ -2,7 +2,7 @@ try
     if isinteractive()
         using OhMyREPL
         using VimBindings
-        using JuliaFormatter
+        import JuliaFormatter: format
     end
 
     using Revise
